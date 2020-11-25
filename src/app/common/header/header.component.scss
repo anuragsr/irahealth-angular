@@ -1,0 +1,50 @@
+@import 'src/vars';
+.navbar{
+  padding-top: 40px;
+  background: $w;
+  .navbar-brand{
+    display: flex;
+    img{ height: 58px; }
+    .ctn-heading{
+      margin-left: 22px;
+      .title{
+        font-size: 24px;
+        line-height: 36px;
+        color: $pr;
+      }
+      .sub-title{
+        font-size: 14px;
+        line-height: 21px;
+        color: $sc;
+      }
+    }
+  }
+  .ml-auto{
+    //@extend %j-c;
+    //@include media("<=vsd"){ display: none; }
+    .ctn-cta a{ margin-left: 7px; }
+  }
+  .ctn-cta{
+    //display: none;
+    a{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .btn img{ margin-right: 10px; }
+  }
+  .ctn-search{
+    margin-left: 10px;
+    width: 250px;
+    transition: width .3s;
+    &.shrink{
+      width: 60px;
+      .search-inp {
+        input{ width: 0; padding: 0; }
+      }
+    }
+    .search-inp {
+      height: 50px;
+      input{ font-size: 18px; }
+    }
+  }
+}
