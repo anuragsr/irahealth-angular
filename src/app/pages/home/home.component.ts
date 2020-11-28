@@ -9,12 +9,15 @@ import { l } from '../../utils/helpers'
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent{
+  lang: string = 'hi'
+
   constructor(
     private service: TranslocoService,
     private langService: LangService
   ) {
     this.langService.langSet$.subscribe((lang: string) => {
       l("Lang:", lang)
+      this.lang = lang
       this.service.setActiveLang(lang)
     })
   }

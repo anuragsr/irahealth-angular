@@ -1,7 +1,7 @@
 <header>
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a href="javascript:void(0)" class="navbar-brand">
+      <a [routerLink]="['/home']" class="navbar-brand">
         <img src="assets/svg/irahealthLogo.svg" alt="">
         <div class="ctn-heading">
           <div class="title">{{ 'title' | transloco }}</div>
@@ -9,12 +9,8 @@
         </div>
       </a>
       <div class="ctn-cta">
-        <button type="button" class="btn btn-pr mr-2" data-toggle="modal" data-target="#loginModal">
+        <button type="button" [routerLink]="['/login']" class="btn btn-pr mr-2">
           {{ 'login' | transloco }}
-        </button>
-        <button class="btn btn-sc">
-          <img src="assets/svg/PhoneIcon.svg" alt="">
-          {{ 'contact-doc' | transloco }}
         </button>
         <div class="ctn-search mr-4">
           <div class="search-inp">
@@ -25,38 +21,18 @@
       </div>
     </div>
   </nav>
-  <nav class="fixed-bottom" style="width: 100px;">
-    <ul>
-      <li><a routerLink="/home" routerLinkActive="active">home</a></li>
-      <li><a routerLink="/doctor-profile" routerLinkActive="active">doctor-profile</a></li>
-    </ul>
-  </nav>
 </header>
 
 <router-outlet></router-outlet>
 
-<footer class="ctn-footer-mob">
-  <!-- <a href="#">हमारे बारे में</a>
-  <a href="#">निबंधन</a>
-  <a href="#">गोपनीयता नीति</a>
-  <a href="#">हमसे संपर्क करें</a> -->
+<footer>
   <div class="footer-left">
-    <a href="about.html">About Us</a>
-    <a href="terms.html">Terms</a>
-    <a href="privacy.html">Privacy Policy</a>
+    <a href="about.html">{{ 'footer.link1' | transloco }}</a>
+    <a href="terms.html">{{ 'footer.link2' | transloco }}</a>
+    <a href="privacy.html">{{ 'footer.link3' | transloco }}</a>
   </div>
   <div class="footer-right">
-    <a href="contact.html">Contact Us</a>
-    <a href="https://blog.irahealth.org/" target="_blank">Blog</a>
-  </div>
-  <div class="ctn-act-mob">
-    <div>
-      <a href="tel:9310208329">
-        <button class="btn btn-pr">
-          <img src="img/svg/phone-w.svg" alt="">
-          <span>Call Doctor for free</span>
-        </button>
-      </a>
-    </div>
+    <a href="contact.html">{{ 'footer.link4' | transloco }}</a>
+    <a href="https://blog.irahealth.org/" target="_blank">{{ 'footer.link5' | transloco }}</a>
   </div>
 </footer>

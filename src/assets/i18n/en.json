@@ -46,5 +46,65 @@
     "art2": { "text": "Homeopathy can cure without side-effects", "desc": "Even though the healing process is slower than other methods, this process has the ability to heal ..."  },
     "art3": { "text": "Homeopathy can cure without side-effects", "desc": "Even though the healing process is slower than other methods, this process has the ability to heal ..."  },
     "art4": { "text": "Healthcare!", "desc": "Home grown plants are generally free of chemicals sold in the market, free of chemicals ..." }
+  },  
+  "section5": {
+    "title": "<span class='pr'>Watch videos</span> about the most common diseases",
+    "subtitle": "Use the following videos to diagnose your illness yourself",
+    "vid1": "Understand the basic characteristics of Covid 19 simply!",
+    "vid2": "What can fever mean for children aged 3-5?",
+    "foot": "See more videos"
+  },
+  "section6": {
+    "title": "Why <span class='pr'>ira health</span>?",
+    "subtitle": "Get best in class service at affordable prices",
+    "item1": { "text": "More Experience", "desc": "Our doctors have 30+ years experience and they will work with you to design a personalised treatment protocol" },
+    "item2": { "text": "Right Answers", "desc": "We help you get the right answers as fast as possible" },
+    "item3": { "text": "Seamless Care", "desc": "You are in good hands, our doctors are known for thier patience and kindness" },
+    "item4": { "text": "Unparalleled Expertise", "desc": "Our doctors have more than 30+ years of clinical and teaching experience and our experts in thier field." },
+    "foot": "Know more about us"
+  },
+  "section7": {
+    "title": "Find out about <span class='pr'>diseases and conditions</span>",
+    "subtitle": "Go ahead and use our symptom checker, it is awesome and free!",
+    "plh": "Type to find diseases and conditions...",
+    "keywords": {
+      "title": "General Search",
+      "tag1": "bone marrow transplant",
+      "tag2": "brain and spinal cord neoplasm (glioma)",
+      "tag3": "rectal cancer",
+      "tag4": "brain cancer",
+      "tag5": "brain tumor",
+      "tag6": "tumor in colon"
+    },
+    "keyboard": {
+      "title": "Search by first letter",
+      "btn1": "Starts with a number?",
+      "btn2": "Try our symptom checker"
+    },
+    "foot": "List of diseases and conditions"
+  },
+  "section8": {
+    "title": "<span class='pr'>Seamless consultation</span> online or in our clinics",
+    "subtitle": "Our patients experience a difference in the first eight weeks and sustained gains above six months!",
+    "cl1": "Nitte Minakshi Institute of Technology,<br/>Yehalanka, Bengaluru - 560064",
+    "cl2": "Unname Road, Block 9, Patel Nagar<br/>New Delhi, Delhi - 110008",
+    "foot": "Consult online"
+  },
+  "section9": {
+    "title": "<span class='pr'>Buy Health Insurance</span> for your employees",
+    "subtitle": "Submit your details to get a callback from our team at irahealth",
+    "form1": "Full Name",
+    "form2": "Phone Number",
+    "form3": "Request Callback",
+    "plh1": "eg. Rahul Singh",
+    "plh2": "eg. +91 98989-98989"
+  },
+  "footer": {
+    "link1": "About Us",
+    "link2": "Terms",
+    "link3": "Privacy Policy",
+    "link4": "Contact Us",
+    "link5": "Blog",
+    "mob": "Call Doctor for free"
   }
 }

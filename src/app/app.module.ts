@@ -10,13 +10,15 @@ import { environment } from '../environments/environment';
 import { translocoLoader } from './transloco.loader';
 import { TranslocoModule, TRANSLOCO_CONFIG, TranslocoConfig } from '@ngneat/transloco';
 import { ToggleButtonComponent } from './utils/toggle-button/toggle-button.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DoctorProfileComponent,
-    ToggleButtonComponent
+    ToggleButtonComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -27,12 +27,15 @@ header{
       .ctn-cta a{ margin-left: 7px; }
     }
     .ctn-cta{
-       @extend %j-c;
+      @extend %j-c;
       a{
         display: inline-block;
         vertical-align: middle;
       }
-      .btn img{ margin-right: 10px; }
+      .btn{
+        @include media("<=mob"){ font-size: 12px; }
+        img{ margin-right: 10px; }
+      }
       .ctn-search{
         margin-left: 10px;
         width: 60px;
@@ -63,9 +66,9 @@ footer{
   .footer-left, .footer-right{
     @include media("<=tab"){
       display: flex;
-      flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
+      flex-direction: column;
       width: 50%;
       height: 100%;
     }
@@ -110,14 +113,12 @@ footer{
       a{ width: 50%; }
     }
     .btn{
+      @extend %j-c;
       border-radius: 0;
       width: 100%;
       height: 70px;
       padding: 0;
       text-align: left;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-size: 16px;
       line-height: 24px;
       img{ margin-right: 15px; }

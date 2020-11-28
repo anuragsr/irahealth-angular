@@ -18,6 +18,7 @@ export class AppComponent {
     private service: TranslocoService,
     private langService: LangService
   ){
+    // To listen from other components and broadcast everywhere
     // this.langService.langGet$.subscribe((lang: string) => {
     //   l("Lang:", lang)
     //   this.lang = lang

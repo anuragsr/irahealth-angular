@@ -43,6 +43,32 @@ button.btn-sc{
   }
 }
 
+// Nav search, Home page bottom
+.search-inp{
+  @extend %j-s-b;
+  margin: 20px auto;
+  height: 60px;
+  background: #F5F5F5;
+  border-radius: 5px;
+  padding: 5px 17px;
+  @include media("<=sd"){
+    height: 50px;
+  }
+  input{
+    width: 100%;
+    background: none;
+    border: none;
+    color: $txt-lt;
+    font-family: $pop;
+    font-size: 20px;
+    @include media("<=sd"){ font-size: 14px; }
+    font-weight: 400;
+    line-height: 30px;
+    &:focus{ outline: none; }
+  }
+  img{ cursor: pointer; }
+}
+
 // Home page doc section, doc profile page
 .d-single{
   width: 220px;

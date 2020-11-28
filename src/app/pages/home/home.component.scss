@@ -428,10 +428,8 @@ main{
     }
 
     &.section7{
-      padding-bottom: 50px;
       .ctn-search{
         margin-top: 50px;
-        // @extend %j-c;
         align-items: flex-start;
         width: 65%;
         margin: 0 auto;
@@ -518,7 +516,6 @@ main{
     }
 
     &.section8{
-      padding-top: 0;
       .ctn-clinic{
         margin-top: 50px;
         @extend %j-c;
