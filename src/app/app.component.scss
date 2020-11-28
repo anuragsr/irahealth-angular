@@ -1,1 +1,127 @@
+@import 'src/scss/vars';
+header{
+  .navbar{
+    padding-top: 40px;
+    background: $w;
+    box-shadow: 0 -1px 4px 4px rgba(31, 68, 84, 0.1);
+    .navbar-brand{
+      display: flex;
+      img{ height: 58px; }
+      .ctn-heading{
+        margin-left: 22px;
+        .title{
+          font-size: 24px;
+          line-height: 36px;
+          color: $pr;
+        }
+        .sub-title{
+          font-size: 14px;
+          line-height: 21px;
+          color: $sc;
+        }
+      }
+    }
+    .ml-auto{
+      @extend %j-c;
+      //@include media("<=vsd"){ display: none; }
+      .ctn-cta a{ margin-left: 7px; }
+    }
+    .ctn-cta{
+       @extend %j-c;
+      a{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .btn img{ margin-right: 10px; }
+      .ctn-search{
+        margin-left: 10px;
+        width: 60px;
+        .search-inp{
+          @extend %j-s-b;
+          cursor: pointer;
+          margin: 20px auto;
+          height: 50px;
+          background: $gr;
+          border-radius: 5px;
+          padding: 5px 17px;
+        }
+      }
+    }
+  }
+}
+
+footer{
+  @extend %j-c;
+  @extend %fw;
+  background: #eee;
+  @include media(">tab"){ height: 60px; }
+  @include media("<=tab"){
+    padding: 25px;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .footer-left, .footer-right{
+    @include media("<=tab"){
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 50%;
+      height: 100%;
+    }
+    a{
+      margin: 0 40px;
+      @include media("<=tab"){
+        margin-left: 0px;
+        margin-bottom: 15px;
+      }
+      color: $sc;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 21px;
+    }
+  }
+  &.ctn-footer-mob{
+    @include media("<=mob"){
+      padding-bottom: 150px;
+    }
+  }
+}
+
+// Mobile bottom action button
+.ctn-act-mob{
+  transition: opacity .3s;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  &.open{
+    z-index: 1;
+    opacity: 1;
+  }
+  >div{
+    width: 100%;
+    &.btn-sc-parent {
+      display: flex;
+      a{ width: 50%; }
+    }
+    .btn{
+      border-radius: 0;
+      width: 100%;
+      height: 70px;
+      padding: 0;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      line-height: 24px;
+      img{ margin-right: 15px; }
+    }
+  }
+}
 

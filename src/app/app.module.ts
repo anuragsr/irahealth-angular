@@ -5,22 +5,36 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DoctorProfileComponent } from './pages/doctor-profile/doctor-profile.component';
-import { FooterComponent } from './common/footer/footer.component';
-import { HeaderComponent } from './common/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { environment } from '../environments/environment';
+import { translocoLoader } from './transloco.loader';
+import { TranslocoModule, TRANSLOCO_CONFIG, TranslocoConfig } from '@ngneat/transloco';
+import { ToggleButtonComponent } from './utils/toggle-button/toggle-button.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DoctorProfileComponent,
-    FooterComponent,
-    HeaderComponent
+    ToggleButtonComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    TranslocoModule
   ],
-  providers: [],
+  providers: [{
+      provide: TRANSLOCO_CONFIG,
+      useValue: {
+        listenToLangChange: true,
+        defaultLang: 'en',
+        availableLangs: ['en', 'hi'],
+        prodMode: environment.production
+      } as TranslocoConfig
+    },
+    translocoLoader
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

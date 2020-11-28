@@ -1,0 +1,129 @@
+// Media queries
+$breakpoints: (
+  'mob-sm': 380px,
+  'mob': 550px,
+  'tab': 768px,
+  'vsd': 1024px,
+  'sd': 1200px,
+  'lp': 1366px,
+  'md': 1500px,
+  'ld': 1800px
+) !default;
+@import 'src/scss/include-media';
+
+// Colors
+$pr: #005450;
+$sc: #333;
+$txt-lt: #999;
+$gr: #F5F5F5;
+
+$b: #000;
+$w: #fff;
+$tr: transparent;
+
+// Fonts
+$pop: 'Poppins';
+$vl: 'Vesper Libre';
+$prata: 'Prata';
+
+// Mixins
+// full width
+%fw{ width: 100%; }
+
+// full height
+%fh{ height: 100%; }
+
+// full height, width
+%fhw{
+  height: 100%;
+  width: 100%;
+}
+
+// Justify content: center
+%j-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Justify content: space between
+%j-s-b {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Justify content: space around
+%j-s-a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+// Justify content: flex start
+%j-f-s {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+// Justify content: flex end
+%j-f-e {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+// Position absolute mixin
+@mixin pa($top:"", $left:"", $bottom:"", $right:"", $unit: "px") {
+  position: absolute;
+  @if $top != ""{
+    top: #{$top}#{$unit};
+  }
+  @if $left != ""{
+    left: #{$left}#{$unit};
+  }
+  @if $bottom != ""{
+    bottom: #{$bottom}#{$unit};
+  }
+  @if $right != ""{
+    right: #{$right}#{$unit};
+  }
+}
+
+// Position fixed mixin
+@mixin pf($top:"", $left:"", $bottom:"", $right:"", $unit: "px") {
+  position: fixed;
+  @if $top != ""{
+    top: #{$top}#{$unit};
+  }
+  @if $left != ""{
+    left: #{$left}#{$unit};
+  }
+  @if $bottom != ""{
+    bottom: #{$bottom}#{$unit};
+  }
+  @if $right != ""{
+    right: #{$right}#{$unit};
+  }
+}
+
+// Mixin for height-width
+@mixin hw($h:"", $w:"", $unit: "px") {
+  @if $h != ""{
+    height: #{$h}#{$unit};
+  }
+  @if $w != ""{
+    width: #{$w}#{$unit};
+  }
+}
+
+// Prefix & Keyframes mixins
+@mixin prefixed($property, $value) {
+  -webkit-#{$property}: #{$value}; /* Safari */
+  -khtml-#{$property}: #{$value}; /* Konqueror HTML */
+  -moz-#{$property}: #{$value};  /* Firefox */
+  -ms-#{$property}: #{$value};  /* Internet Explorer/Edge */
+  -o-#{$property}: #{$value};  /* Opera */
+  #{$property}: #{$value};    /* Non-prefixed version */
+}

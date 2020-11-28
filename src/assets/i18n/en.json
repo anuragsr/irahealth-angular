@@ -1,0 +1,50 @@
+{
+  "title": "ira health",
+  "sub-title": "Research  •  Education  •  Patient Care",
+  "login": "Login",
+  "contact-doc": "Contact Doctor",
+  "section0": {
+    "h-title": "Connect with Expert Counselors in Clinic or via Video",
+    "h-subtitle": "Ask your question for free and get answers Within 10 minutes<br/>From our experienced doctors.",
+    "act-txt1": "Talk on Whatsapp",
+    "act-txt2": "Call a Doctor",
+    "act-txt3": "Find clinics near you",
+    "exp": "Explore irahealth"
+  },
+  "section1": {
+    "title": "<span class='pr'>Tailor your plan</span> according to your needs",
+    "subtitle": "Our healthcare comes with no surprises, no hidden costs & no out-of-pocket expenses.",
+    "item1": { "text": "Pre-existing diseases", "desc": "Get coverage on pre-existing diseases" },
+    "item2": { "text": "Waiting period", "desc": "Get covered from first day, no waiting periods" },
+    "item3": { "text": "Maternity benefits", "desc": "Coverage for pregnancy and new borns" },
+    "item4": { "text": "Limits", "desc": "No limits on room rent" },
+    "item5": { "text": "Covid-19", "desc": "Coverage for Covid-19" },
+    "item6": { "text": "OPD Cover", "desc": "Get unlimited consultations with special add ons" }
+  },
+  "section2": {
+    "title": "Our Doctors <span class='pr'>have 30+ years of experience</span>",
+    "subtitle": "Our doctors and health coaches work with you to create a personalised treatment protocol",
+    "doc1": { "text": "Dr P. K. Jain", "desc": "Eye-specialist, 30 years experience" },
+    "doc2": { "text": "Dr Apoorva Jain", "desc": "Pediatrician, 3 years experience" },
+    "doc3": { "text": "Dr J. K. Jain", "desc": "Eye-specialist, 30 years experience" },
+    "doc4": { "text": "Dr Pari Mishra", "desc": "Neurosurgeon, 25 years experience" },
+    "foot": "View our Doctors' Panel"
+  },
+  "section3": {
+    "title": "What is <span class='pr'>Irahelath</span>?",
+    "subtitle": "Our patients convey what is possible with Irahealth",
+    "pat1": "Lakshmi Bai",
+    "pat2": "Lakshmi S.",
+    "pat3": "Balwinder Singh",
+    "pat4": "Anupam Mishra",
+    "pat5": "Preet Kaur",
+    "foot": "View more"
+  },
+  "section4": {
+    "title": "Read about <span class='pr'>Health management <br/>and Remedies</span>",
+    "art1": { "text": "Read about health management and cures", "desc": "Home grown plants are generally free of chemicals sold in the market, free of chemicals ..." },
+    "art2": { "text": "Homeopathy can cure without side-effects", "desc": "Even though the healing process is slower than other methods, this process has the ability to heal ..."  },
+    "art3": { "text": "Homeopathy can cure without side-effects", "desc": "Even though the healing process is slower than other methods, this process has the ability to heal ..."  },
+    "art4": { "text": "Healthcare!", "desc": "Home grown plants are generally free of chemicals sold in the market, free of chemicals ..." }
+  }
+}

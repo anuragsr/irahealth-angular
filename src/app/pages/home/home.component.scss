@@ -1,0 +1,580 @@
+@import 'src/scss/vars';
+main{
+  margin-top: 140px;
+  section{
+    // Common for each section
+    padding: 70px 0;
+    text-align: center;
+    color: #777;
+    .container{
+      @include media(">=mob-sm", "<=mob"){
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+    .title{
+      font-family: $prata;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 60px;
+      @include media("<=mob"){
+        font-size: 30px;
+        line-height: 41px;
+      }
+    }
+    .sub-title{
+      width: 565px;
+      @include media(">mob", "<=vsd"){ width: 100%; }
+      margin: 0 auto;
+      font-family: $pop;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 26px;
+      @include media("<=mob"){
+        margin-top: 10px;
+        width: 335px;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+    .foot-link{
+      // cursor: pointer;
+      font-family: $pop;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 26px;
+      margin-top: 50px;
+      @include media("<=mob"){
+        margin-top: 0px;
+      }
+      a{ text-decoration: none; &:hover{ color: $pr; } }
+      img{
+        vertical-align: unset;
+        margin-left: 10px;
+      }
+    }
+
+    // Page sections
+    &.section0{
+      // @include media(">mob"){ padding-top: 20px; }
+      @include media("<=mob"){ padding-top: 40px; }
+      .hero{
+        @include media(">mob"){ text-align: left; }
+        @include media(">tab"){ height: 600px; }
+        // height: 560px;
+        color: $pr;
+        &>div>div{
+          margin-bottom: 40px;
+          @include media("<=mob"){
+            margin-bottom: 20px;
+          }
+        }
+        .h-title{
+          // font-family: $vl;
+          font-family: $prata;
+          margin-top: 70px;
+          font-size: 62px;
+          line-height: 85px;
+          // transition: all .3s;
+          @include media(">mob", "<=vsd"){
+            font-size: 45px;
+            width: 80%;
+          }
+          @include media("<=mob"){
+            font-size: 30px;
+            font-weight: 400;
+            line-height: 45px;
+          }
+        }
+        .h-sub-title{
+          font-family: $pop;
+          line-height: 26px;
+          font-weight: 300;
+          font-size: 17px;
+          @include media("<=mob"){
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 21px;
+          }
+        }
+        .ctn-act{
+          .btn{
+            @extend %j-c;
+            width: 100%;
+            @include media("<=mob"){
+              font-size: 12px;
+            }
+          }
+          .btn-sc{
+            // @include media(">sd"){ margin-left: 15px; }
+            //@include media("<=990px"){ margin-top: 15px; }
+            @include media(">mob", "<=tab"){ margin-top: 0px; }
+          }
+          img{
+            margin-right: 15px;
+            vertical-align: text-top;
+          }
+        }
+        .ctn-nearest{
+          font-family: $pop;
+          font-size: 17px;
+          font-weight: 500;
+          line-height: 26px;
+          @include media("<=mob"){
+            font-size: 14px;
+            line-height: 21px;
+          }
+          img{
+            cursor: pointer;
+            vertical-align: text-top;
+            height: 17px;
+            margin-left: 17px;
+          }
+        }
+        .right{
+          position: relative;
+          left: 0;
+          // transition: all .3s;
+          transform: scale(1);
+          transform-origin: top left;
+          @include media("<=md"){ left: -50px; }
+          @include media("<=lp"){ transform: scale(.8); }
+          @include media("<=sd"){ transform: scale(.7); }
+          @include media("<=tab"){
+            transform: scale(.8);
+            transform-origin: center;
+            height: 500px;
+          }
+          @include media("<=mob"){
+            height: 400px;
+            transform: scale(1);
+            left: 0;
+          }
+          @include media("<=mob-sm"){
+            left: -25px;
+          }
+          img, .sq{
+            @include pa(0, 0);
+            @include hw(350, 350);
+            @include media("<=mob"){
+              @include hw(200, 200);
+            }
+          }
+          .sq{
+            background: #e6efee;
+            z-index: -1;
+            &.sq1{
+              left: 250px; top: 30px;
+              @include media("<=mob"){ left: 120px; }
+            }
+            &.sq2{
+              left: 110px; top: 190px;
+              @include media("<=mob"){
+                left: 80px;
+                top: 140px;
+              }
+            }
+          }
+          img{
+            &.img1{
+              top: 60px; left: 50px;
+            }
+            &.img2{
+              top: 280px; left: 280px;
+              @include media("<=mob"){
+                left: 160px; top: 190px;
+              }
+            }
+          }
+        }
+      }
+
+      .ctn-scrolldown{
+        margin-top: 50px;
+        cursor: pointer;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 26px;
+        @include media("<=mob"){
+          font-size: 14px;
+          line-height: 21px;
+        }
+        img{
+          vertical-align: middle;
+          height: 17px;
+          margin-left: 12px;
+        }
+      }
+    }
+
+    &.section1{
+      .ctn-tailor{
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 50px;
+        .t-single{
+          width: 250px;
+          margin: 0 auto;
+          margin-bottom: 25px;
+          @include media("<=mob"){
+            width: 195px;
+            margin: 0 auto;
+            margin-bottom: 35px;
+          }
+          .ctn-img{ padding: 9px; }
+          img{
+            @include media("<=mob"){ height: 64px; }
+          }
+          .ctn-txt{
+            @include media(">mob"){ padding: 20px; }
+          }
+          .t-title{
+            font-family: $prata;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 23px;
+            margin-bottom: 5px;
+          }
+          .t-sub-title{
+            color: #777;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 21px;
+          }
+        }
+      }
+    }
+
+    &.section2{
+      .ctn-doc{
+        @extend %j-c;
+        flex-wrap: wrap;
+        margin-top: 70px;
+        .d-single{
+          margin: 25px;
+          .d-title{
+            font-family: $prata;
+          }
+        }
+        a{ text-decoration: none; }
+      }
+    }
+
+    &.section3{
+      .ctn-pat{
+        margin: 100px 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        @include media(">mob","<=vsd"){
+          height: 800px;
+          // margin-bottom: 50px;
+        }
+        @include media("<=mob"){
+          margin: 50px 0;
+          flex-direction: column;
+          align-items: center;
+        }
+        .p-single{
+          width: 220px;
+          position: relative;
+          text-align: left;
+          margin-left: -50px;
+          @include media("<=mob"){
+            margin-left: 0px;
+          }
+          img{
+            box-shadow: 0px 3px 10px 0px rgba($b, .16);
+          }
+          .p-title{
+            @include pa(0, 0);
+            z-index: 1;
+            padding: 2px 5px;
+            color: $w;
+            background: rgba(41, 45, 66, 0.4);
+            font-family: $pop;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21px;
+          }
+          &:nth-of-type(1){
+            top: -50px; margin-left: 0;
+            @include media("<=mob"){
+              top: 0; left: -50px;
+            }
+          }
+          &:nth-of-type(2){
+            top: 50px;
+            @include media(">mob","<=vsd"){
+              margin-left: -40px;
+              top: 120px;
+            }
+            @include media("<=mob"){
+              margin-top: -100px; left: 50px;
+            }
+          }
+          &:nth-of-type(3){
+            top: -50px;
+            @include media(">mob","<=vsd"){
+              margin-left: -400px;
+              top: 280px;
+            }
+            @include media("<=mob"){
+              top: 0; left: -50px;
+            }
+          }
+          &:nth-of-type(4){
+            top: 50px;
+            @include media(">mob","<=vsd"){
+              margin-left: -40px;
+              top: 450px;
+            }
+            @include media("<=mob"){
+              margin-top: -100px; left: 50px;
+            }
+          }
+          &:nth-of-type(5){
+            top: -50px;
+            @include media(">mob","<=vsd"){
+              top: 620px;
+              margin-left: -220px;
+              left: -180px;
+            }
+            @include media("<=mob"){
+              top: 0; left: -50px;
+            }
+          }
+        }
+      }
+      .foot-link{
+        @include media(">mob","<=vsd"){
+          margin-top: 150px;
+        }
+      }
+    }
+
+    &.section4{
+      .ctn-art{
+        margin-top: 50px;
+        @extend %j-s-b;
+        align-items: flex-start;
+        @include media("<=mob"){
+          flex-direction: column;
+          align-items: center;
+        }
+        a{ text-decoration: none; color: $sc; }
+      }
+    }
+
+    &.section5{
+      .ctn-v{
+        margin-top: 50px;
+        @extend %j-c;
+        align-items: flex-start;
+        @include media("<=sd"){
+          flex-direction: column;
+          align-items: center;
+        }
+        a{
+          text-decoration: none; color: $sc;
+          margin-right: 30px;
+          @include media("<=sd"){
+            margin-right: 0px;
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+
+    &.section6{
+      .ctn-why{
+        text-align: center;
+        margin-top: 50px;
+        @extend %j-s-b;
+        align-items: flex-start;
+        .w-single{
+          width: 250px;
+          margin: 0 auto;
+          @include media("<=mob"){
+            width: 160px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+          }
+          .ctn-img{ padding: 9px; }
+          img{
+            @include media("<=mob"){
+              height: 64px;
+            }
+          }
+          .ctn-txt{
+            @include media(">mob"){ padding: 20px; }
+          }
+          .w-title{
+            // font-family: $vl;
+            font-family: $prata;
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 36px;
+          }
+          .w-sub-title{
+            color: #777;
+            font-family: $pop;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 21px;
+          }
+        }
+      }
+    }
+
+    &.section7{
+      padding-bottom: 50px;
+      .ctn-search{
+        margin-top: 50px;
+        // @extend %j-c;
+        align-items: flex-start;
+        width: 65%;
+        margin: 0 auto;
+        @include media("<=sd"){ width: 80%; }
+        @include media("<=mob"){ width: 100%; }
+        .tags, .keyboard{
+          margin-bottom: 20px;
+          .title{
+            font-family: $pop;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            margin-bottom: 10px;
+          }
+        }
+        .tags{
+          text-align: left;
+          .tag{
+            background: rgba(0, 84, 80, 0.1);
+            border-radius: 5px;
+            font-family: $pop;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            padding: 2px 10px;
+          }
+        }
+        .keyboard{
+          .title{ text-align: left; }
+          .content{
+            @include media("<=mob"){
+              display: flex;
+              align-items: flex-start;
+              justify-content: flex-start;
+              flex-shrink: 0;
+              flex-wrap: wrap;
+            }
+            .letter{
+              @include hw(40, 40);
+              @extend %j-c;
+              display: inline-flex;
+              border: 2px solid #BBBBBB;
+              border-radius: 48px;
+              margin-right: 10px;
+              margin-bottom: 10px;
+              font-family: $vl;
+              font-size: 19px;
+              font-weight: 500;
+              line-height: 36px;
+              color: #555;
+              transition: all .3s;
+              cursor: pointer;
+              &:hover{
+                background: darken(#555, 5%);
+                color: $w;
+              }
+            }
+          }
+        }
+        .ctn-btn{
+          .btn{
+            @include media("<=lp"){ width: auto!important; }
+            @include media("<=mob"){
+              margin-top: 25px;
+              padding: 10px 25px;
+            }
+          }
+          .btn-sc{ width: 264px; }
+          .btn-pr{
+            margin-left: 20px; width: 320px;
+            @include media("<=tab"){
+              margin-top: 25px;
+              margin-left: 0px;
+            }
+            @include media("<=mob"){
+              margin-bottom: 35px;
+            }
+          }
+        }
+      }
+    }
+
+    &.section8{
+      padding-top: 0;
+      .ctn-clinic{
+        margin-top: 50px;
+        @extend %j-c;
+        align-items: flex-start;
+        @include media("<=sd"){
+          flex-direction: column;
+          align-items: center;
+        }
+        a{
+          text-decoration: none; color: $sc;
+          margin-right: 30px;
+          @include media("<=sd"){
+            margin-right: 0;
+            margin-bottom: 50px;
+          }
+        }
+        .cl-single{
+          width: 300px;
+          @include media("<=sd"){
+            margin-right: 0;
+          }
+          .ctn-txt{ padding-top: 10px; }
+          .cl-title{
+            text-align: left;
+            color: #555;
+            font-family: $pop;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21px;
+            font-family: Poppins;
+          }
+        }
+      }
+    }
+
+    &.section9{
+      form{
+        width: 320px;
+        margin: 35px auto;
+        .ctn-form-field{
+          @extend %fw;
+          background: #F2F2F2;
+          border-radius: 5px;
+          padding: 5px 10px;
+          text-align: left;
+          margin-bottom: 20px;
+          input{
+            background: $tr;
+            border: none;
+            width: 100%;
+            font-size: 14px;
+            color: $txt-lt;
+          }
+        }
+        button img{ margin-right: 15px; }
+      }
+    }
+  }
+}
