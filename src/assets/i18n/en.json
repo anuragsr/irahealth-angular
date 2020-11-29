@@ -106,5 +106,27 @@
     "link4": "Contact Us",
     "link5": "Blog",
     "mob": "Call Doctor for free"
+  },
+  "signup": "Signup",
+  "email": "Email address",
+  "name": "Full Name",
+  "name-plh": "eg. Rahul Singh",
+  "pass": "Password",
+  "pass-plh": "your password",
+  "forgot-pass": "Forgot Password?",
+  "cancel": "Cancel",
+  "send": "Send",
+  "tnc": "By signing up you accept to our<br/><a href='#'>Terms of Use</a> & <a href='#''>Privacy Policy</a>",
+  "cwg": "Continue with Google",
+  "cwf": "Continue with Facebook",
+  "suicide" : "This is not a suicide helpline",
+  "scText" : "We are not suicide prevention or emergency helpline. If you need urgent help, immediately call a suicide prevention helpline, they are here to help you. <a href='#'>Click here to see some numbers.</a>",
+  "slider": {
+    "c1": "100% Anonymous",
+    "c2": "Expert members",
+    "c2-1": "25+ Years of Experience",
+    "c2-2": "548+ Expert Counsellors",
+    "c2-3": "54765+ Cases Solved",
+    "c3": "365 Days & 24x7 Support"
   }
 }

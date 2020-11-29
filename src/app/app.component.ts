@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslocoService } from '@ngneat/transloco';
 import { LangService } from './utils/lang/lang-service.service';
+
 import { l } from './utils/helpers';
 
 @Component({
@@ -16,7 +18,8 @@ export class AppComponent {
 
   constructor(
     private service: TranslocoService,
-    private langService: LangService
+    private langService: LangService,
+    public router: Router
   ){
     // To listen from other components and broadcast everywhere
     // this.langService.langGet$.subscribe((lang: string) => {

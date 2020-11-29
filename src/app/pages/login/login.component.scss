@@ -1,0 +1,229 @@
+@import 'src/scss/vars';
+.site-bg{
+  @include pf(0, 0);
+  height: 140%;
+  width: 140%;
+  z-index: -2;
+  &::before, &::after{
+    content: "";
+    @extend %fhw;
+    @include pa(-23, -23, "", "", "%");
+    @include media("<=md"){ left: -20%; }
+    @include media("<=sd"){ left: -8%; }
+  }
+
+  &::before{
+    // Below will not work after build
+    //background: url(/assets/svg/bg-login-1.svg) no-repeat right;
+    background: url(~src/assets/svg/bg-login-1.svg) no-repeat right;
+    background-size: contain;
+    transform: rotate(6deg);
+  }
+  &::after{
+    // Below will not work after build
+    //background: url(/assets/svg/bg-login-2.svg) no-repeat right;
+    background: url(~src/assets/svg/bg-login-2.svg) no-repeat right;
+    background-size: contain;
+    transform: rotate(5.6deg);
+  }
+}
+
+main.login{
+  margin-top: 140px;
+  color: #777;
+  .container-fluid{
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+    @include media(">=mob-sm", "<=mob"){
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  // Login forms
+  .ctn-forms{
+    @extend %j-f-s;
+    @include media(">lp"){ padding-left: 100px; }
+    @include media(">992px", "<=lp"){ padding-left: 50px; }
+    @include media("<=992px"){ justify-content: center; }
+    .inner{
+      @extend %j-c;
+      flex-direction: column;
+    }
+    a{
+      color: $pr;
+      text-decoration: underline;
+    }
+    form{
+      width: 320px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      //display: none;
+      .label{
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        color: $txt-lt;
+      }
+      .form-title{
+        color: $pr;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 36px;
+      }
+      .form-subtitle a{
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+      .form-header{ @extend %j-s-b; }
+      .ctn-form-field{
+        @extend %fw;
+        border: 1px solid #ddd;
+        background: #F2F2F2;
+        border-radius: 5px;
+        padding: 5px 10px;
+        text-align: left;
+        margin-bottom: 20px;
+        input{
+          background: $tr;
+          border: none;
+          width: 100%;
+          font-size: 14px;
+          color: $txt-lt;
+        }
+      }
+      .fp {
+        text-align: right;
+        a{
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 15px;
+        }
+      }
+      .form-btns{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .btn{
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          height: 40px;
+          border-radius: 5px;
+          &.btn-sc{
+            border: none;
+            background: #eee;
+          }
+        }
+      }
+      .tnc{
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 15px;
+        text-align: center;
+        a{ color: #777; }
+      }
+    }
+    .separator{
+      position: relative;
+      &::before, &::after{
+        content: "";
+        height: 4px;
+        width: 131px;
+        @include pa(12, 0);
+      }
+      &::before{
+        background: url(~src/assets/svg/line-lt.svg) no-repeat center;
+        left: -140px;
+      }
+      &::after{
+        background: url(~src/assets/svg/line-rt.svg) no-repeat center;
+        left: 27px;
+      }
+    }
+    .social{
+      margin: 25px 0;
+      button{
+        @extend %j-c;
+        justify-content: flex-start;
+        width: 250px;
+        padding: 12px 18px;
+        box-shadow: 0px 3px 6px rgba($b, .12);
+        border-radius: 44px;
+        background: $w;
+        border: none;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        cursor: pointer;
+        img{ margin-right: 10px; }
+        &:focus{ outline: none; }
+        &:hover{ background: #eee; }
+      }
+    }
+    .suicide-info{
+      width: 270px;
+      border: 1px solid $pr;
+      background: #F2F6F7;
+      padding: 8px 16px;
+      border-radius: 5px;
+      color: $pr;
+      @include media("<=mob"){ display: none; }
+      .title{
+        color: $pr;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
+      }
+      .text{
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 15px;
+      }
+    }
+  }
+
+  .row{ height: calc(100vh - 140px); }
+  .ctn-slider{
+    @extend %fh;
+    @extend %j-c;
+    .bx-wrapper{
+      @extend %fw;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      .bxslider {
+        // li{ height: 475px; }
+        img{ margin: 0 auto; height: 300px; }
+        .caption{
+          margin-top: 25px;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 30px;
+          text-align: center;
+          color: $w;
+          height: 100px;
+          @extend %j-f-e;
+          &.multi{
+            flex-direction: column;
+            align-items: center;
+          }
+        }
+        .caption-sm{
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 21px;
+          text-align: center;
+          color: $w;
+        }
+      }
+      .bx-pager.bx-default-pager a{
+        background: rgba($w, .3);
+        &.active{ background: rgba($w, 1); }
+      }
+    }
+  }
+}

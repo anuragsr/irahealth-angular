@@ -50,6 +50,16 @@ header{
         }
       }
     }
+    &.nav-login{
+      box-shadow: none;
+      background: $tr;
+      .ctn-cta{
+        color: $w;
+        .btn, .ctn-search{
+          display: none;
+        }
+      }
+    }
   }
 }
 

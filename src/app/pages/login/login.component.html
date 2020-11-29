@@ -1,1 +1,125 @@
-<p style="padding-top: 200px; height: 500px;">login works!</p>
+<div class="site-bg d-none d-lg-block"></div>
+<main class="login">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-7 ctn-forms">
+        <div class="inner">
+          <form *ngIf="visibleForm === 'login'" id="login-form">
+            <div class="form-group form-header">
+              <div class="form-title">{{ 'login' | transloco }}</div>
+              <div class="form-subtitle">
+                <a href (click)="$event.preventDefault(); visibleForm = 'signup'" >{{ 'signup' | transloco }}</a>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="ctn-form-field">
+                <div class="label">{{ 'email' | transloco }}</div>
+                <input type="email" name="email" placeholder="example@email.xyz">
+              </div>
+            </div>
+            <div class="form-group mb-0">
+              <div class="ctn-form-field mb-0">
+                <div class="label">{{ 'pass' | transloco }}</div>
+                <input type="password" name="password" [placeholder]=" 'pass-plh' | transloco ">
+              </div>
+            </div>
+            <div class="form-group fp">
+              <a href (click)="$event.preventDefault(); visibleForm = 'forgot-pass'">{{ 'forgot-pass' | transloco }}</a>
+            </div>
+            <div class="form-group form-btns">
+              <button type="button" class="btn btn-sc">{{ 'cancel' | transloco }}</button>
+              <button type="button" class="btn btn-pr">{{ 'login' | transloco }}</button>
+            </div>
+          </form>
+          <form *ngIf="visibleForm === 'signup'" id="signup-form">
+            <div class="form-group form-header">
+              <div class="form-title">{{ 'signup' | transloco }}</div>
+              <div class="form-subtitle">
+                <a href (click)="$event.preventDefault(); visibleForm = 'login'" >{{ 'login' | transloco }}</a>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="ctn-form-field">
+                <div class="label">{{ 'name' | transloco }}</div>
+                <input type="text" name="name" [placeholder]=" 'name-plh' | transloco ">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="ctn-form-field">
+                <div class="label">{{ 'email' | transloco }}</div>
+                <input type="email" name="email" placeholder="example@email.xyz">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="ctn-form-field">
+                <div class="label">{{ 'pass' | transloco }}</div>
+                <input type="password" name="password" [placeholder]=" 'pass-plh' | transloco ">
+              </div>
+            </div>
+            <div class="form-group form-btns">
+              <button type="button" class="btn btn-sc">{{ 'cancel' | transloco }}</button>
+              <button type="button" class="btn btn-pr">{{ 'signup' | transloco }}</button>
+            </div>
+            <div class="form-group tnc" [innerHTML]=" 'tnc' | transloco "></div>
+          </form>
+          <form *ngIf="visibleForm === 'forgot-pass'" id="forgot-pass-form">
+            <div class="form-group form-header">
+              <div class="form-title">{{ 'forgot-pass' | transloco }}</div>
+              <div class="form-subtitle">
+                <a href (click)="$event.preventDefault(); visibleForm = 'login'">{{ 'login' | transloco }}</a>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="ctn-form-field">
+                <div class="label">{{ 'email' | transloco }}</div>
+                <input type="email" name="email" placeholder="example@email.xyz">
+              </div>
+            </div>
+            <div class="form-group form-btns">
+              <button type="button" class="btn btn-sc">{{ 'cancel' | transloco }}</button>
+              <button type="button" class="btn btn-pr">{{ 'send' | transloco }}</button>
+            </div>
+          </form>
+          <div class="separator">or</div>
+          <div class="social">
+            <button>
+              <img src="assets/svg/Google.svg" alt="">
+              {{ 'cwg' | transloco }}
+            </button><br/>
+            <button>
+              <img src="assets/svg/Facebook.svg" alt="">
+              {{ 'cwf' | transloco }}
+            </button>
+          </div>
+          <div class="suicide-info">
+            <div class="title">{{ 'suicide' | transloco }}</div>
+            <div class="text" [innerHTML]=" 'scText' | transloco "></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 ctn-slider d-none d-lg-flex">
+        <ul class="bxslider">
+          <li>
+            <img src="assets/svg/slide1.svg" />
+            <div class="caption">{{ 'slider.c1' | transloco }}</div>
+          </li>
+          <li>
+            <img src="assets/svg/slide2.svg" />
+            <div class="caption multi">
+              {{ 'slider.c2' | transloco }}
+              <div class="caption-sm">
+                <div>{{ 'slider.c2-1' | transloco }}</div>
+                <div>{{ 'slider.c2-2' | transloco }}</div>
+                <div>{{ 'slider.c2-3' | transloco }}</div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <img src="assets/svg/slide3.svg" />
+            <div class="caption">{{ 'slider.c3' | transloco }}</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</main>
