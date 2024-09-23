@@ -13,7 +13,7 @@ import { l } from './utils/helpers';
 })
 export class AppComponent {
   title: string = 'irahealth';
-  lang: string = 'hi';
+  lang: string = 'en';
   checked: boolean = false;
 
   constructor(
@@ -31,14 +31,13 @@ export class AppComponent {
 
   ngOnInit(): void {
     console.log(this.service.getActiveLang())
-    this.service.setActiveLang('hi')
+    this.service.setActiveLang('en')
   }
 
   changeLang(value){
     this.checked = value
     this.lang = value ? 'en' : 'hi'
     this.broadcast()
-    // this.service.setActiveLang(value ? 'en' : 'hi')
   }
 
   broadcast() {
