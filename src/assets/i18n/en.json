@@ -46,7 +46,7 @@
     "art2": { "text": "Homeopathy can cure without side-effects", "desc": "Even though the healing process is slower than other methods, this process has the ability to heal ..."  },
     "art3": { "text": "Homeopathy can cure without side-effects", "desc": "Even though the healing process is slower than other methods, this process has the ability to heal ..."  },
     "art4": { "text": "Healthcare!", "desc": "Home grown plants are generally free of chemicals sold in the market, free of chemicals ..." }
-  },  
+  },
   "section5": {
     "title": "<span class='pr'>Watch videos</span> about the most common diseases",
     "subtitle": "Use the following videos to diagnose your illness yourself",
@@ -98,6 +98,25 @@
     "form3": "Request Callback",
     "plh1": "eg. Rahul Singh",
     "plh2": "eg. +91 98989-98989"
+  },
+  "about" : {
+    "title1": "ABOUT US",
+    "para1": "With a population of 1.3 Billion people, there are only ~1 Million doctors in India. Roughly speaking we have around 1 doctor for every 1300 people. Typically patients in India consult doctors once a year, whereas this number is 3-5 for developed nations. Infant mortality for India is close to 32 whereas it is 2 for the most developed nations. The supply side skew is even higher for specialist doctors in India.",
+    "para2": "Study after study has laid this down, that not having access to affordable healthcare, and proper patient  education are root causes for India’s health problems.",
+    "title2": "What is irahealth?",
+    "para3": "At ira health we are a team of technologists and healthcare professionals trying to solve this challenging problem. Providing free virtual OPD, where patients can consult with doctors for free is our first initiative. If you are a doctor and would like to contribute your time, please do reach out to us.",
+    "para4": "If you are excited about solving challenging problems, do connect with us, we are always looking for partners and team members who can help us chase our mission.",
+    "title3": "Location",
+    "text1": "Our team is currently based out of Gurgaon.",
+    "title4": "Address",
+    "text2": "Open in Google Maps",
+    "text3": "852, JMD megapolis, sohna Road",
+    "title5": "Contact number",
+    "text4": "Chat in WhatsApp",
+    "text5": "Call Us",
+    "title6": "Email",
+    "text6": "Divya Jain",
+    "text7": "Founder, irahealth.org"
   },
   "footer": {
     "link1": "About Us",

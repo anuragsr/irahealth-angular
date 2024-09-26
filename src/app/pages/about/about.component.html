@@ -1,0 +1,98 @@
+<main>
+  <section class="breadcrumbs">
+    <div class="container">
+      <div class="ctn-breadcrumb">
+        <div>
+          <a [routerLink]="['/home']">Home</a> >
+          <a [routerLink]="['/about']" >About Us</a>
+          <div class="label mt-1">Let's keep it simple!</div>
+        </div>
+        <div class="ctn-search-sort d-none d-lg-flex">
+          <div class="ctn-search">
+            <div class="label">Search</div>
+            <input type="text" placeholder="type some topic name/word">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="filters-sm d-md-block d-lg-none">
+    <div class="container">
+      <div class="ctn-search">
+        <div class="label">Search</div>
+        <input type="text" placeholder="type some topic name/word">
+      </div>
+    </div>
+  </section>
+
+  <section class="section0 pb-0">
+    <div class="container">
+      <div class="title pr">{{ 'about.title1' | transloco }}</div>
+      <div class="text">
+        <p>{{ 'about.para1' | transloco }}</p>
+        <p>{{ 'about.para2' | transloco }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section1 pb-0">
+    <div class="container">
+      <div class="title pr">{{ 'about.title2' | transloco }}</div>
+      <div class="text">
+        <p>{{ 'about.para3' | transloco }}</p>
+        <p>{{ 'about.para4' | transloco }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-contact">
+    <div class="container">
+      <div class="title title-sm pr">{{ 'about.title3' | transloco }}</div>
+      <div class="text">
+        <p>{{ 'about.text1' | transloco }}</p>
+      </div>
+
+      <div class="title title-sm pr">{{ 'about.title4' | transloco }}</div>
+      <div class="text">
+        <img class="map" src="assets/png/map.png" alt=""><br/>
+        <button class="btn btn-sc mb-4">
+          <img src="assets/svg/marker.svg" alt="">
+          {{ 'about.text2' | transloco }}
+        </button>
+        <p>{{ 'about.text3' | transloco }}</p>
+      </div>
+
+      <div class="title title-sm pr">{{ 'about.title5' | transloco }}</div>
+      <div class="text">
+        <p>+91 89897-89897</p>
+        <a class="btn-parent mr-2" href="tel:9310208329">
+          <button class="btn btn-pr">
+            <img src="assets/svg/WhatsAppIcon.svg" alt="">
+            <span>{{ 'about.text4' | transloco }}</span>
+          </button>
+        </a>
+        <a class="btn-parent" href="tel:9310208329">
+          <button class="btn btn-sc">
+            <img src="assets/svg/PhoneIcon.svg" alt="">
+            <span>{{ 'about.text5' | transloco }}</span>
+          </button>
+        </a>
+      </div>
+
+      <div class="title title-sm pr">{{ 'about.title6' | transloco }}</div>
+      <div class="text">
+        <p>divya@irahealth.org</p>
+        <div class="founder">
+          <p>
+            <span>{{ 'about.text6' | transloco }}</span><br/>
+            <span>{{ 'about.text7' | transloco }}</span>
+          </p>
+          <a href="#"><img src="assets/svg/LinkedInLogo.svg" alt=""></a>
+          <a href="#"><img src="assets/svg/FacebookLogo.svg" alt=""></a>
+          <a href="#"><img src="assets/svg/TwitterLogo.svg" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
