@@ -1,0 +1,65 @@
+<main>
+  <section class="breadcrumbs">
+    <div class="container">
+      <div class="ctn-breadcrumb">
+        <div>
+          <a [routerLink]="['/home']">Home</a> >
+          <a [routerLink]="['/terms']">Terms of Use</a>
+        </div>
+        <div class="ctn-search-sort d-none d-lg-flex">
+          <div class="ctn-search">
+            <div class="label">Search</div>
+            <input type="text" placeholder="type some topic name/word">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="filters-sm d-md-block d-lg-none">
+    <div class="container">
+      <div class="ctn-search">
+        <div class="label">Search</div>
+        <input type="text" placeholder="type some topic name/word">
+      </div>
+    </div>
+  </section>
+
+  <section class="section0">
+    <div class="container">
+      <div class="title pr">{{ 'terms.title1' | transloco }}</div>
+      <div class="text">
+        <p [innerHTML]="'terms.para1' | transloco"></p>
+        <p [innerHTML]="'terms.para2' | transloco"></p>
+        <p [innerHTML]="'terms.para3' | transloco"></p>
+        <p [innerHTML]="'terms.para4' | transloco"></p>
+        <p [innerHTML]="'terms.para5' | transloco"></p>
+        <p [innerHTML]="'terms.para6' | transloco"></p>
+        <p [innerHTML]="'terms.para7' | transloco"></p>
+        <p [innerHTML]="'terms.para8' | transloco"></p>
+        <p [innerHTML]="'terms.para9' | transloco"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section1 pb-0">
+    <div class="container">
+      <div class="title pr">{{ 'terms.title2' | transloco }}</div>
+      <div class="text">
+        <ol class="list-alpha" [innerHTML]="'terms.para10' | transloco">
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section2">
+    <div class="container">
+      <div class="title pr">{{ 'terms.title3' | transloco }}</div>
+      <div class="text">
+        <ol class="list-alpha">
+          <li [innerHTML]="'terms.para11' | transloco"></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>

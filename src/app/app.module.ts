@@ -13,6 +13,7 @@ import { ToggleButtonComponent } from './utils/toggle-button/toggle-button.compo
 import { LoginComponent } from './pages/login/login.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
+import { TermsComponent } from './pages/terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PrivacyComponent } from './pages/privacy/privacy.component';
     ToggleButtonComponent,
     LoginComponent,
     AboutComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
