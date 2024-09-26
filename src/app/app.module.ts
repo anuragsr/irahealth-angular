@@ -12,6 +12,7 @@ import { TranslocoModule, TRANSLOCO_CONFIG, TranslocoConfig } from '@ngneat/tran
 import { ToggleButtonComponent } from './utils/toggle-button/toggle-button.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AboutComponent } from './pages/about/about.component';
+import { PrivacyComponent } from './pages/privacy/privacy.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AboutComponent } from './pages/about/about.component';
     DoctorProfileComponent,
     ToggleButtonComponent,
     LoginComponent,
-    AboutComponent
+    AboutComponent,
+    PrivacyComponent
   ],
   imports: [
     BrowserModule,

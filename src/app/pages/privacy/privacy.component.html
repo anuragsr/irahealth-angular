@@ -1,0 +1,63 @@
+<main>
+  <section class="breadcrumbs">
+    <div class="container">
+      <div class="ctn-breadcrumb">
+        <div>
+          <a [routerLink]="['/home']">Home</a> >
+          <a [routerLink]="['/privacy']">Privacy Policy</a>
+        </div>
+        <div class="ctn-search-sort d-none d-lg-flex">
+          <div class="ctn-search">
+            <div class="label">Search</div>
+            <input type="text" placeholder="type some topic name/word">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="filters-sm d-md-block d-lg-none">
+    <div class="container">
+      <div class="ctn-search">
+        <div class="label">Search</div>
+        <input type="text" placeholder="type some topic name/word">
+      </div>
+    </div>
+  </section>
+
+  <section class="section0">
+    <div class="container">
+      <div class="title pr">{{ 'privacy.title1' | transloco }}</div>
+      <div class="text">
+        <p [innerHTML]="'privacy.para1' | transloco"></p>
+        <p>
+          <span [innerHTML]="'privacy.para2' | transloco"></span>
+          &nbsp;<a href="mailto:divya@irahealth.org">divya@irahealth.org</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section1 pb-0">
+    <div class="container">
+      <div class="title pr">{{ 'privacy.title2' | transloco }}</div>
+      <div class="text">
+        <p [innerHTML]="'privacy.para3' | transloco"></p>
+        <p [innerHTML]="'privacy.para4' | transloco"></p>
+        <ol class="list-alpha" [innerHTML]="'privacy.para5' | transloco"></ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section2">
+    <div class="container">
+      <div class="title pr">{{ 'privacy.title3' | transloco }}</div>
+      <div class="text">
+        <p>{{ 'privacy.text1' | transloco }}</p>
+        <p>{{ 'privacy.text2' | transloco }}: <a href="mailto:divya@irahealth.org">divya@irahealth.org</a></p>
+        <p>{{ 'privacy.text3' | transloco }}</p>
+        <p>{{ 'privacy.text4' | transloco }}: <a href="tel:+919910074373">+91 99100-74373</a></p>
+      </div>
+    </div>
+  </section>
+</main>
