@@ -1,0 +1,822 @@
+<main>
+  <section class="breadcrumbs">
+    <div class="container">
+      <div class="ctn-breadcrumb">
+        <div>
+          <a [routerLink]="['/home']">Home</a> >
+          <a href="#">Delhi</a> >
+          <a [routerLink]="['/doctors']">Search for Doctor</a>
+          <div class="label mt-1">Search top doctors near you!</div>
+        </div>
+        <div class="ctn-search-sort d-none d-lg-flex">
+          <div class="ctn-search">
+            <div class="label">Search</div>
+            <input type="text" placeholder="type doctor's name/speciality">
+          </div>
+          <div class="ctn-dd ctn-sort">
+            <div class="label">Sort By</div>
+            <div class="h-100">
+              <div class="select-side">
+                <img src="assets/svg/caret-down.svg" alt="">
+              </div>
+              <select class="form-control" id="sel1">
+                <option>Relevance</option>
+                <option>Rating</option>
+                <option>Availability</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="filters-sm d-md-block d-lg-none">
+    <div class="container">
+      <div class="ctn-search">
+        <div class="label">Search</div>
+        <input type="text" placeholder="type doctor's name/speciality">
+      </div>
+      <div class="ctn-dd-outer">
+        <div class="ctn-dd ctn-sort">
+          <div class="label">Sort By</div>
+          <div class="h-100">
+            <div class="select-side">
+              <img src="assets/svg/caret-down.svg" alt="">
+            </div>
+            <select class="form-control" id="sel1">
+              <option>Relevance</option>
+              <option>Rating</option>
+              <option>Availability</option>
+            </select>
+          </div>
+        </div>
+        <div class="ctn-dd ctn-sort">
+          <div class="label">Gender</div>
+          <div class="h-100">
+            <div class="select-side">
+              <img src="assets/svg/caret-down.svg" alt="">
+            </div>
+            <select class="form-control" id="sel1">
+              <option>Male</option>
+              <option>Female</option>
+              <option>Any</option>
+            </select>
+          </div>
+        </div>
+        <div class="ctn-dd ctn-sort">
+          <div class="label">City</div>
+          <div class="h-100">
+            <div class="select-side">
+              <img src="assets/svg/caret-down.svg" alt="">
+            </div>
+            <select class="form-control" id="sel1">
+              <option>Mumbai</option>
+              <option>Delhi</option>
+              <option>Bangalore</option>
+              <option>Indore</option>
+              <option>Patna</option>
+            </select>
+          </div>
+        </div>
+        <div class="ctn-dd ctn-sort">
+          <div class="label">Area</div>
+          <div class="h-100">
+            <div class="select-side">
+              <img src="assets/svg/caret-down.svg" alt="">
+            </div>
+            <select class="form-control" id="sel1">
+              <option>Yelahanka</option>
+              <option>CV Raman nagar</option>
+              <option>Majestic</option>
+              <option>Near Airport</option>
+              <option>Kormangla</option>
+            </select>
+          </div>
+        </div>
+        <div class="ctn-dd ctn-sort">
+          <div class="label">Diseases</div>
+          <div class="h-100">
+            <div class="select-side">
+              <img src="assets/svg/caret-down.svg" alt="">
+            </div>
+            <select class="form-control" id="sel1">
+              <option>Cholera</option>
+              <option>Malaria</option>
+              <option>Diarrhea</option>
+              <option>Arthritis</option>
+            </select>
+          </div>
+        </div>
+        <div class="ctn-dd ctn-sort">
+          <div class="label">Symptoms</div>
+          <div class="h-100">
+            <div class="select-side">
+              <img src="assets/svg/caret-down.svg" alt="">
+            </div>
+            <select class="form-control" id="sel1">
+              <option>Chest pain</option>
+              <option>Stomach pain</option>
+              <option>Headache</option>
+              <option>Vomiting</option>
+              <option>Fever</option>
+            </select>
+          </div>
+        </div>
+        <div class="ctn-dd ctn-sort">
+          <div class="label">Availability</div>
+          <div class="h-100">
+            <div class="select-side">
+              <img src="assets/svg/caret-down.svg" alt="">
+            </div>
+            <select class="form-control" id="sel1">
+              <option>Today</option>
+              <option>This week</option>
+              <option>Anytime</option>
+            </select>
+          </div>
+        </div>
+        <div class="ctn-dd ctn-fee">
+          <div class="label">Fees</div>
+          <div class="fee-opt">
+            <div class="ctn-fee-opt">
+              <input type="number" value="0" step="50"/>
+            </div>
+            <div class="px-0">to</div>
+            <div class="ctn-fee-opt">
+              <input type="number" value="2000" step="50"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section0">
+    <div class="container">
+      <div class="row">
+        <div class="col-3 d-none d-lg-block filters">
+          <span class="pr desktop-only">Filters</span>
+          <div class="filter-group">
+            <div class="label">City</div>
+            <input class="mt-2" type="text" placeholder="type city" value="Bangalore" />
+            <div class="options">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Mumbai</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                <label class="custom-control-label" for="customCheck2">Delhi</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck3" checked>
+                <label class="custom-control-label" for="customCheck3">Bangalore</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                <label class="custom-control-label" for="customCheck4">Indore</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck5">
+                <label class="custom-control-label" for="customCheck5">Patna</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="label">Area</div>
+            <input class="mt-2" type="text" placeholder="type area" value="Kormangla" />
+            <div class="options">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck2-1">
+                <label class="custom-control-label" for="customCheck2-1">Yelahanka</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck2-2">
+                <label class="custom-control-label" for="customCheck2-2">CV Raman nagar</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck2-3" >
+                <label class="custom-control-label" for="customCheck2-3">Majestic</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck2-4">
+                <label class="custom-control-label" for="customCheck2-4">Near Airport</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck2-5" checked>
+                <label class="custom-control-label" for="customCheck2-5">Kormangla</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="label">Diseases</div>
+            <input class="mt-2" type="text" placeholder="type disease" value="" />
+            <div class="options">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck3-1">
+                <label class="custom-control-label" for="customCheck3-1">Cholera</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck3-2">
+                <label class="custom-control-label" for="customCheck3-2">Malaria</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck3-3" >
+                <label class="custom-control-label" for="customCheck3-3">Diarrhea</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck3-4">
+                <label class="custom-control-label" for="customCheck3-4">Arthritis</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck3-5" checked>
+                <label class="custom-control-label" for="customCheck3-5">Bronchitis</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="label">Symptoms</div>
+            <input class="mt-2" type="text" placeholder="type symptoms" value="" />
+            <div class="options">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck4-1">
+                <label class="custom-control-label" for="customCheck4-1">Chest pain</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck4-2">
+                <label class="custom-control-label" for="customCheck4-2">Stomach pain</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck4-3" >
+                <label class="custom-control-label" for="customCheck4-3">Headache</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck4-4">
+                <label class="custom-control-label" for="customCheck4-4">Vomiting</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck4-5" checked>
+                <label class="custom-control-label" for="customCheck4-5">Fever</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="label">Availability</div>
+            <div class="options">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck5-1">
+                <label class="custom-control-label" for="customCheck5-1">Today</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck5-2">
+                <label class="custom-control-label" for="customCheck5-2">This week</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck5-3" >
+                <label class="custom-control-label" for="customCheck5-3">Anytime</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="label">Gender</div>
+            <div class="options">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck6-1">
+                <label class="custom-control-label" for="customCheck6-1">Male</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck6-2">
+                <label class="custom-control-label" for="customCheck6-2">Female</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck6-3" >
+                <label class="custom-control-label" for="customCheck6-3">Any</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="label">Fees</div>
+            <div class="options fee-opt">
+              <div class="ctn-fee-opt">
+                <div>From</div>
+                <input type="number" value="0" step="50"/>
+              </div>
+              <div class="ctn-fee-opt">
+                <div>To</div>
+                <input type="number" value="2000" step="50"/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-9 results">
+          <div class="row result-item">
+            <div class="col-3 d-none d-md-block">
+              <div class="d-single">
+                <a [routerLink]="['/doctor-single']">
+                  <img src="assets/jpg/Doctor1.jpg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="row mb-4">
+                <div class="col-4 d-sm-block d-md-none ctn-img-sm">
+                  <div class="d-single">
+                    <a [routerLink]="['/doctor-single']">
+                      <img src="assets/jpg/Doctor1.jpg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-8 col-md-12">
+                  <div class="ctn-name">
+                    <a [routerLink]="['/doctor-single']">
+                      <span class="pr">Dr. P.K. Jain</span>
+                    </a>
+                    <div class="ctn-av d-none d-md-flex">
+                      <img src="assets/svg/tick.svg" alt="">
+                      <div class="pr a-text">
+                        Available Today<br class="d-sm-block d-md-none"/> at ₹400 consultation fee at clinic
+                      </div>
+                    </div>
+                  </div>
+                  <div class="value">Gastroenterologist, 30yrs exp.</div>
+                  <div class="ctn-av d-sm-flex d-md-none">
+                    <img src="assets/svg/tick.svg" alt="">
+                    <div class="pr a-text">
+                      Available Today<br class="d-sm-block d-md-none"/> at ₹400 consultation fee at clinic
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Location</div>
+                      <div class="value">Gurugram, Delhi NCR</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Department</div>
+                      <div class="value">Gastroenterology and Hepatology</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Phone Number</div>
+                      <div class="value">
+                        <a href="tel:+919192939493">+91 91929 39493</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Email</div>
+                      <div class="value">
+                        <a href="mailto:dr.pkjain@irahealth.com">dr.pkjain@irahealth.com</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row ctn-act">
+                <div class="col-12 col-sm-5">
+                  <a [routerLink]="['/doctor-single']">
+                    <button class="btn btn-pr">
+                      <img src="assets/svg/appointment.svg" alt="">
+                      <span>Request an Appointment</span>
+                    </button>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-7 btn-sc-parent">
+                  <a [routerLink]="['/doctor-single']">
+                    <button class="btn btn-sc">
+                      <img src="assets/svg/userIcon.svg" alt="">
+                      <span>View Profile</span>
+                    </button>
+                  </a>
+                  <a href="#">
+                    <button class="btn btn-sc">
+                      <img src="assets/svg/bookmark.svg" alt="">
+                      <span>Bookmark</span>
+                    </button>
+                  </a>
+                </div>
+
+              </div>
+              <hr/>
+            </div>
+          </div>
+
+          <div class="row result-item">
+            <div class="col-3 d-none d-md-block">
+              <div class="d-single">
+                <a [routerLink]="['/doctor-single']">
+                  <img src="assets/jpg/Doctor2.jpg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="row mb-4">
+                <div class="col-4 d-sm-block d-md-none ctn-img-sm">
+                  <div class="d-single">
+                    <a [routerLink]="['/doctor-single']">
+                      <img src="assets/jpg/Doctor2.jpg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-8 col-md-12">
+                  <div class="ctn-name">
+                    <a [routerLink]="['/doctor-single']">
+                      <span class="pr">Dr. D.T. Mishra</span>
+                    </a>
+                    <div class="ctn-av d-none d-md-flex">
+                      <img src="assets/svg/tick.svg" alt="">
+                      <div class="pr a-text">
+                        Available Today<br class="d-sm-block d-md-none"/> at ₹400 consultation fee at clinic
+                      </div>
+                    </div>
+                  </div>
+                  <div class="value">Gastroenterologist, 30yrs exp.</div>
+                  <div class="ctn-av d-sm-flex d-md-none">
+                    <img src="assets/svg/tick.svg" alt="">
+                    <div class="pr a-text">
+                      Available Today<br class="d-sm-block d-md-none"/> at ₹400 consultation fee at clinic
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Location</div>
+                      <div class="value">Gurugram, Delhi NCR</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Department</div>
+                      <div class="value">Gastroenterology and Hepatology</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Phone Number</div>
+                      <div class="value">
+                        <a href="tel:+919192939493">+91 91929 39493</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Email</div>
+                      <div class="value">
+                        <a href="mailto:dr.pkjain@irahealth.com">dr.pkjain@irahealth.com</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row ctn-act">
+                <div class="col-12 col-sm-5">
+                  <a [routerLink]="['/doctor-single']">
+                    <button class="btn btn-pr">
+                      <img src="assets/svg/appointment.svg" alt="">
+                      <span>Request an Appointment</span>
+                    </button>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-7 btn-sc-parent">
+                  <a [routerLink]="['/doctor-single']">
+                    <button class="btn btn-sc">
+                      <img src="assets/svg/userIcon.svg" alt="">
+                      <span>View Profile</span>
+                    </button>
+                  </a>
+                  <a href="#">
+                    <button class="btn btn-sc">
+                      <img src="assets/svg/bookmark.svg" alt="">
+                      <span>Bookmark</span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <hr/>
+            </div>
+          </div>
+
+          <div class="row result-item">
+            <div class="col-3 d-none d-md-block">
+              <div class="d-single">
+                <a [routerLink]="['/doctor-single']">
+                  <img src="assets/jpg/Doctor3.jpg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="row mb-4">
+                <div class="col-4 d-sm-block d-md-none ctn-img-sm">
+                  <div class="d-single">
+                    <a [routerLink]="['/doctor-single']">
+                      <img src="assets/jpg/Doctor3.jpg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-8 col-md-12">
+                  <div class="ctn-name">
+                    <a [routerLink]="['/doctor-single']">
+                      <span class="pr">Dr. Parirath Tiwari</span>
+                    </a>
+                    <div class="ctn-av d-none d-md-flex">
+                      <img src="assets/svg/tick.svg" alt="">
+                      <div class="pr a-text">
+                        Available Today<br class="d-sm-block d-md-none"/> at ₹400 consultation fee at clinic
+                      </div>
+                    </div>
+                  </div>
+                  <div class="value">Gastroenterologist, 30yrs exp.</div>
+                  <div class="ctn-av d-sm-flex d-md-none">
+                    <img src="assets/svg/tick.svg" alt="">
+                    <div class="pr a-text">
+                      Available Today<br class="d-sm-block d-md-none"/> at ₹400 consultation fee at clinic
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Location</div>
+                      <div class="value">Gurugram, Delhi NCR</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Department</div>
+                      <div class="value">Gastroenterology and Hepatology</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Phone Number</div>
+                      <div class="value">
+                        <a href="tel:+919192939493">+91 91929 39493</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Email</div>
+                      <div class="value">
+                        <a href="mailto:dr.pkjain@irahealth.com">dr.pkjain@irahealth.com</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row ctn-act">
+                <div class="col-12 col-sm-5">
+                  <a [routerLink]="['/doctor-single']">
+                    <button class="btn btn-pr">
+                      <img src="assets/svg/appointment.svg" alt="">
+                      <span>Request an Appointment</span>
+                    </button>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-7 btn-sc-parent">
+                  <a [routerLink]="['/doctor-single']">
+                    <button class="btn btn-sc">
+                      <img src="assets/svg/userIcon.svg" alt="">
+                      <span>View Profile</span>
+                    </button>
+                  </a>
+                  <a href="#">
+                    <button class="btn btn-sc">
+                      <img src="assets/svg/bookmark.svg" alt="">
+                      <span>Bookmark</span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <hr/>
+            </div>
+          </div>
+
+          <div class="row result-item">
+            <div class="col-3 d-none d-md-block">
+              <div class="d-single">
+                <img src="assets/jpg/Doctor4.jpg" alt="" />
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="row mb-4">
+                <div class="col-4 d-sm-block d-md-none ctn-img-sm">
+                  <div class="d-single">
+                    <a [routerLink]="['/doctor-single']">
+                      <img src="assets/jpg/Doctor4.jpg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-8 col-md-12">
+                  <div class="ctn-name">
+                    <a [routerLink]="['/doctor-single']">
+                      <span class="pr">Dr. Pari Tiwari</span>
+                    </a>
+                    <div class="ctn-av d-none d-md-flex">
+                      <img src="assets/svg/tick.svg" alt="">
+                      <div class="pr a-text">
+                        Available Today<br class="d-sm-block d-md-none"/> at ₹400 consultation fee at clinic
+                      </div>
+                    </div>
+                  </div>
+                  <div class="value">Gastroenterologist, 30yrs exp.</div>
+                  <div class="ctn-av d-sm-flex d-md-none">
+                    <img src="assets/svg/tick.svg" alt="">
+                    <div class="pr a-text">
+                      Available Today<br class="d-sm-block d-md-none"/> at ₹400 consultation fee at clinic
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Location</div>
+                      <div class="value">Gurugram, Delhi NCR</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Department</div>
+                      <div class="value">Gastroenterology and Hepatology</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Phone Number</div>
+                      <div class="value">
+                        <a href="tel:+919192939493">+91 91929 39493</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Email</div>
+                      <div class="value">
+                        <a href="mailto:dr.pkjain@irahealth.com">dr.pkjain@irahealth.com</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row ctn-act">
+                <div class="col-12 col-sm-5">
+                  <a [routerLink]="['/doctor-single']">
+                    <button class="btn btn-pr">
+                      <img src="assets/svg/appointment.svg" alt="">
+                      <span>Request an Appointment</span>
+                    </button>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-7 btn-sc-parent">
+                  <a [routerLink]="['/doctor-single']">
+                    <button class="btn btn-sc">
+                      <img src="assets/svg/userIcon.svg" alt="">
+                      <span>View Profile</span>
+                    </button>
+                  </a>
+                  <a href="#">
+                    <button class="btn btn-sc">
+                      <img src="assets/svg/bookmark.svg" alt="">
+                      <span>Bookmark</span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <hr/>
+            </div>
+          </div>
+
+          <div class="row result-item">
+            <div class="col-3 d-none d-md-block">
+              <div class="d-single">
+                <a [routerLink]="['/doctor-single']">
+                  <img src="assets/jpg/Doctor5.jpg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="row mb-4">
+                <div class="col-4 d-sm-block d-md-none ctn-img-sm">
+                  <div class="d-single">
+                    <a [routerLink]="['/doctor-single']">
+                      <img src="assets/jpg/Doctor5.jpg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-8 col-md-12">
+                  <div class="ctn-name">
+                    <a [routerLink]="['/doctor-single']">
+                      <span class="pr">Dr. Divya Jain</span>
+                    </a>
+                    <div class="ctn-av d-none d-md-flex">
+                      <img src="assets/svg/tick.svg" alt="">
+                      <div class="pr a-text">
+                        Available Today<br class="d-sm-block d-md-none"/> at ₹400 consultation fee at clinic
+                      </div>
+                    </div>
+                  </div>
+                  <div class="value">Gastroenterologist, 30yrs exp.</div>
+                  <div class="ctn-av d-sm-flex d-md-none">
+                    <img src="assets/svg/tick.svg" alt="">
+                    <div class="pr a-text">
+                      Available Today<br class="d-sm-block d-md-none"/> at ₹400 consultation fee at clinic
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Location</div>
+                      <div class="value">Gurugram, Delhi NCR</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Department</div>
+                      <div class="value">Gastroenterology and Hepatology</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Phone Number</div>
+                      <div class="value">
+                        <a href="tel:+919192939493">+91 91929 39493</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Email</div>
+                      <div class="value">
+                        <a href="mailto:dr.pkjain@irahealth.com">dr.pkjain@irahealth.com</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row ctn-act">
+                <div class="col-12 col-sm-5">
+                  <a [routerLink]="['/doctor-single']">
+                    <button class="btn btn-pr">
+                      <img src="assets/svg/appointment.svg" alt="">
+                      <span>Request an Appointment</span>
+                    </button>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-7 btn-sc-parent">
+                  <a [routerLink]="['/doctor-single']">
+                    <button class="btn btn-sc">
+                      <img src="assets/svg/userIcon.svg" alt="">
+                      <span>View Profile</span>
+                    </button>
+                  </a>
+                  <a href="#">
+                    <button class="btn btn-sc">
+                      <img src="assets/svg/bookmark.svg" alt="">
+                      <span>Bookmark</span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <hr/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

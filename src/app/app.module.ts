@@ -20,6 +20,7 @@ import { TermsComponent } from './pages/terms/terms.component';
 import { ClinicsComponent } from './pages/clinics/clinics.component';
 import { ClinicSingleComponent } from './pages/clinic-single/clinic-single.component';
 import { DoctorSingleComponent } from './pages/doctor-single/doctor-single.component';
+import { DoctorsComponent } from './pages/doctors/doctors.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DoctorSingleComponent } from './pages/doctor-single/doctor-single.compo
     TermsComponent,
     ClinicsComponent,
     ClinicSingleComponent,
-    DoctorSingleComponent
+    DoctorSingleComponent,
+    DoctorsComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, TranslocoModule],
   providers: [
