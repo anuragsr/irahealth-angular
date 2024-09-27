@@ -1,0 +1,166 @@
+<main>
+  <section class="breadcrumbs">
+    <div class="container-fluid">
+      <div class="ctn-breadcrumb">
+        <div>
+          <a [routerLink]="['/home']">Home</a> >
+          <a [routerLink]="['/chat']">Chat Page</a>
+          <div class="label mt-1">We are there for you 24/7</div>
+        </div>
+        <div>
+          <button class="show-doc">Show Doctors</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section0">
+    <div class="chat-overlay"></div>
+
+    <div class="ctn-chips">
+      <a [routerLink]="['/doctor-single']">
+        <div class="chip" data-id="doc1">
+          <img src="assets/jpg/Doctor1.jpg" alt="">
+          <div>
+            <div class="d-title pr">Dr P. K. Jain</div>
+            <div class="d-sub-title">Physician, 40 years experience</div>
+          </div>
+        </div>
+      </a>
+
+      <a [routerLink]="['/doctor-single']">
+        <div class="chip" data-id="doc2">
+          <img src="assets/jpg/Doctor2.jpg" alt="">
+          <div>
+            <div class="d-title pr">Dr P. K. Jain</div>
+            <div class="d-sub-title">Physician, 40 years experience</div>
+          </div>
+        </div>
+      </a>
+
+      <a [routerLink]="['/doctor-single']">
+        <div class="chip" data-id="doc3">
+          <img src="assets/jpg/Doctor3.jpg" alt="">
+          <div>
+            <div class="d-title pr">Dr. Anuj Sharma</div>
+            <div class="d-sub-title">Opthalmologist, 40 years experience</div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="left">
+      <div class="ctn-doc">
+        <a [routerLink]="['/doctor-single']">
+          <div class="d-single" data-id="doc1">
+                  <img src="assets/jpg/Doctor1.jpg" alt="">
+                  <div class="d-title pr">Dr P. K. Jain</div>
+                  <div class="d-sub-title">Physician, 40 years experience</div>
+                  <div class="info">
+                    <div class="ctn-av d-flex">
+                      <img src="assets/svg/tick.svg" alt="">
+                      <div class="pr a-text">
+                        Available Today at ₹400 consultation fee at clinic
+                      </div>
+                    </div>
+                    <br/>
+                    <div class="label">Department</div>
+                    <div class="text">Gastroenterology and Hepatology</div>
+
+                    <br/>
+                    <div class="label">Description</div>
+                    <div class="text">Dr. Kahn is gastroenterologist specializing in caring for patients with esophageal disorders, with a particular expertise and clinical focus in Barrett's esophagus and esophageal cancer. He also cares for patients with complex and refractory esophageal strictures utilizing novel techniques and directs the esophageal self-dilation program in Arizona.</div>
+                  </div>
+                </div>
+        </a>
+        <a [routerLink]="['/doctor-single']">
+          <div class="d-single" data-id="doc2">
+                  <img src="assets/jpg/Doctor2.jpg" alt="">
+                  <div class="d-title pr">Dr P. K. Jain</div>
+                  <div class="d-sub-title">Physician, 40 years experience</div>
+                  <div class="info">
+                    <div class="ctn-av d-flex">
+                      <img src="assets/svg/tick.svg" alt="">
+                      <div class="pr a-text">
+                        Available Today at ₹400 consultation fee at clinic
+                      </div>
+                    </div>
+                    <br/>
+                    <div class="label">Department</div>
+                    <div class="text">Gastroenterology and Hepatology</div>
+
+                    <br/>
+                    <div class="label">Description</div>
+                    <div class="text">Dr. Kahn is gastroenterologist specializing in caring for patients with esophageal disorders, with a particular expertise and clinical focus in Barrett's esophagus and esophageal cancer. He also cares for patients with complex and refractory esophageal strictures utilizing novel techniques and directs the esophageal self-dilation program in Arizona.</div>
+                  </div>
+                </div>
+        </a>
+        <a [routerLink]="['/doctor-single']">
+          <div class="d-single" data-id="doc3">
+                  <img src="assets/jpg/Doctor3.jpg" alt="">
+                  <div class="d-title pr">Dr. Anuj Sharma</div>
+                  <div class="d-sub-title">Opthalmologist, 40 years experience</div>
+                  <div class="info">
+                    <div class="ctn-av d-flex">
+                      <img src="assets/svg/tick.svg" alt="">
+                      <div class="pr a-text">
+                        Available Today at ₹400 consultation fee at clinic
+                      </div>
+                    </div>
+                    <br/>
+                    <div class="label">Department</div>
+                    <div class="text">Gastroenterology and Hepatology</div>
+
+                    <br/>
+                    <div class="label">Description</div>
+                    <div class="text">Dr. Kahn is gastroenterologist specializing in caring for patients with esophageal disorders, with a particular expertise and clinical focus in Barrett's esophagus and esophageal cancer. He also cares for patients with complex and refractory esophageal strictures utilizing novel techniques and directs the esophageal self-dilation program in Arizona.</div>
+                  </div>
+                </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="ctn-chat-outer h-100">
+      <div class="ctn-chat">
+
+        <div class="messages">
+          <div class="message received">
+            <div class="ctn-q">What are you struggling with?</div>
+            <div class="ctn-opts">
+              <div class="ctn-opt">Cancer</div>
+              <div class="ctn-opt">Cholera</div>
+              <div class="ctn-opt">Malaria</div>
+              <div class="ctn-opt">Killer Bee</div>
+            </div>
+          </div>
+          <div class="message sent">
+            <div class="ctn-a">Malaria</div>
+          </div>
+          <div class="message received">
+            <div class="ctn-q">What type of Malaria?</div>
+            <div class="ctn-opts">
+              <div class="ctn-opt">Type A</div>
+              <div class="ctn-opt">Type B</div>
+              <div class="ctn-opt">Type C</div>
+              <div class="ctn-opt">Type D</div>
+              <div class="ctn-opt">Type E</div>
+              <div class="ctn-opt show-more">Show More</div>
+            </div>
+          </div>
+          <div class="message sent">
+            <div class="ctn-a">Type C</div>
+          </div>
+        </div>
+
+        <div class="message nav">
+          <button><< BACK</button>
+          <button>SKIP >></button>
+        </div>
+      </div>
+      <div class="ctn-input">
+        <button class="btn-send"><img src="assets/svg/send.svg" alt=""></button>
+        <textarea name="input-msg" placeholder="type your text response here..."></textarea>
+      </div>
+    </div>
+  </section>
+</main>

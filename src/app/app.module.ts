@@ -21,6 +21,7 @@ import { ClinicsComponent } from './pages/clinics/clinics.component';
 import { ClinicSingleComponent } from './pages/clinic-single/clinic-single.component';
 import { DoctorSingleComponent } from './pages/doctor-single/doctor-single.component';
 import { DoctorsComponent } from './pages/doctors/doctors.component';
+import { ChatComponent } from './pages/chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { DoctorsComponent } from './pages/doctors/doctors.component';
     ClinicsComponent,
     ClinicSingleComponent,
     DoctorSingleComponent,
-    DoctorsComponent
+    DoctorsComponent,
+    ChatComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, TranslocoModule],
   providers: [

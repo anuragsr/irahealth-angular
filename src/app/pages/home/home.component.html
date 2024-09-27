@@ -11,10 +11,12 @@
           <div class="ctn-act">
             <div class="row mb-3">
               <div class="col pr-0">
-                <button class="btn btn-pr">
-                  <img src="assets/svg/WhatsAppIcon.svg" alt="Whatsapp Icon" />
-                  {{ 'section0.act-txt1' | transloco }}
-                </button>
+                <a [routerLink]="['/chat']">
+                  <button class="btn btn-pr">
+                    <img src="assets/svg/WhatsAppIcon.svg" alt="Whatsapp Icon" />
+                    {{ 'section0.act-txt1' | transloco }}
+                  </button>
+                </a>
               </div>
               <div class="col">
                 <button class="btn btn-sc">

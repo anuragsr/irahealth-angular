@@ -9,6 +9,7 @@ import { ClinicsComponent } from './pages/clinics/clinics.component';
 import { ClinicSingleComponent } from './pages/clinic-single/clinic-single.component';
 import { DoctorSingleComponent } from './pages/doctor-single/doctor-single.component';
 import { DoctorsComponent } from './pages/doctors/doctors.component';
+import { ChatComponent } from './pages/chat/chat.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'clinics', component: ClinicsComponent },
   { path: 'clinic-single', component: ClinicSingleComponent },
   { path: 'doctors', component: DoctorsComponent },
-  { path: 'doctor-single', component: DoctorSingleComponent }
+  { path: 'doctor-single', component: DoctorSingleComponent },
+  { path: 'chat', component: ChatComponent }
 ];
 
 @NgModule({
