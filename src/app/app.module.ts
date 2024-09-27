@@ -8,12 +8,17 @@ import { DoctorProfileComponent } from './pages/doctor-profile/doctor-profile.co
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { translocoLoader } from './transloco.loader';
-import { TranslocoModule, TRANSLOCO_CONFIG, TranslocoConfig } from '@ngneat/transloco';
+import {
+  TranslocoModule,
+  TRANSLOCO_CONFIG,
+  TranslocoConfig
+} from '@ngneat/transloco';
 import { ToggleButtonComponent } from './utils/toggle-button/toggle-button.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { TermsComponent } from './pages/terms/terms.component';
+import { ClinicsComponent } from './pages/clinics/clinics.component';
 
 @NgModule({
   declarations: [
@@ -24,15 +29,12 @@ import { TermsComponent } from './pages/terms/terms.component';
     LoginComponent,
     AboutComponent,
     PrivacyComponent,
-    TermsComponent
+    TermsComponent,
+    ClinicsComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    TranslocoModule
-  ],
-  providers: [{
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, TranslocoModule],
+  providers: [
+    {
       provide: TRANSLOCO_CONFIG,
       useValue: {
         listenToLangChange: true,
@@ -45,4 +47,4 @@ import { TermsComponent } from './pages/terms/terms.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

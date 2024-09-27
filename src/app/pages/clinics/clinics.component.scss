@@ -1,0 +1,327 @@
+@import 'src/scss/vars';
+main{
+  margin-top: 140px;
+  section{
+    // Common for each section
+    padding: 70px 0;
+    text-align: center;
+    color: #777;
+    .container{
+      position: relative;
+      @include media(">=mob-sm", "<=mob"){
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
+    .row{ text-align: left; }
+    .label{
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 400;
+      color: $txt-lt;
+    }
+    .value{
+      font-size: 14px;
+      line-height: 21px;
+      color: $sc;
+      a{
+        color: $pr;
+        text-decoration: underline;
+      }
+    }
+
+    // Making these global for desktop and mobile filters
+    .ctn-search, .ctn-dd{
+      background: #F2F2F2;
+      border-radius: 5px;
+      margin-left: 15px;
+      padding: 5px 10px;
+    }
+    .ctn-search{
+      text-align: left;
+      width: 320px;
+      input{
+        background: $tr;
+        border: none;
+        width: 100%;
+        font-size: 14px;
+        color: $txt-lt;
+      }
+    }
+    .ctn-dd{
+      position: relative;
+      width: 170px;
+      padding-right: 0;
+      text-align: left;
+      select {
+        cursor: pointer;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+
+        background: $tr;
+        border: none;
+        font-size: 14px;
+        color: $sc;
+
+        @include pa(0, 0);
+        height: 100%!important;
+        width: 100%!important;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        align-items: flex-end;
+
+        &:focus {
+          background: none;
+          border: none;
+          outline: none;
+          box-shadow: none;
+        }
+      }
+
+      .select-side {
+        @include pa(0, "", "", 0);
+        @extend %j-c;
+        background-color: #E9E9E9;
+        width: 40px;
+        height: 100%;
+        border-radius: 5px;
+        pointer-events:none;
+      }
+    }
+    .fee-opt{
+      @extend %j-s-b;
+      width: 80%;
+      .ctn-fee-opt{
+        font-size: 12px;
+        width: 48%;
+        background: #F2F2F2;
+        border-radius: 5px;
+        padding: 7px 10px;
+        input{
+          @extend %fw;
+          border: none;
+          color: $sc;
+          background: $tr;
+        }
+      }
+    }
+
+    // Breadcrumbs
+    &.breadcrumbs{
+      background: rgba(250, 250, 250, 0.95);
+      text-align: left;
+      padding: 20px 0;
+      .ctn-breadcrumb{
+        @extend %j-s-b;
+        a{
+          text-decoration: underline;
+          color: $pr;
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 26px;
+          @include media("<=mob"){
+            font-size: 14px;
+            line-height: 21px;
+          }
+        }
+        .ctn-search-sort{
+          display: flex;
+        }
+      }
+    }
+
+    // Filters for small screen
+    &.filters-sm{
+      padding: 20px 0;
+      .ctn-search{
+        width: 100%;
+        margin: 0;
+        padding: 15px 25px;
+        margin-bottom: 15px;
+      }
+      .ctn-dd-outer{
+        height: 80px;
+        display: flex;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        .ctn-dd{
+          margin: 0;
+          margin-right: 15px;
+          height: 50px;
+          flex-shrink: 0;
+          &.ctn-fee{
+            width: 190px;
+          }
+        }
+        .fee-opt{
+          @include pa(0, 0);
+          @extend %fhw;
+          align-items: flex-end;
+          div{
+            background: $tr;
+            padding: 7px 10px;
+          }
+        }
+      }
+    }
+
+    &.section0{
+      padding-top: 40px;
+      .filters{
+        .pr{
+          font-size: 17px;
+          font-weight: 500;
+          line-height: 26px;
+        }
+        .filter-group{
+          margin-top: 20px;
+          >input{
+            width: 80%;
+            background: #F2F2F2;
+            border-radius: 5px;
+            border: none;
+            padding: 7px 15px;
+            font-size: 14px;
+            color: $sc;
+          }
+          .options{
+            margin-top: 10px;
+            .custom-checkbox {
+              margin-top: 5px;
+              .custom-control-input{
+                &:focus~.custom-control-label::before {
+                  box-shadow:none !important;
+                }
+                &:checked~.custom-control-label::before{
+                  background: $pr;
+                }
+              }
+              .custom-control-label{
+                color: $sc;
+                font-size: 14px;
+                line-height: 21px;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+      .results{
+        .result-item{
+          margin-bottom: 50px;
+          .row{ margin: 10px 0; }
+          .d-single{
+            // @extend %fw;
+            padding: 0;
+            padding-left: 17px;
+            position: relative;
+            width: 205px;
+            top: 40px;
+            left: -35px;
+            border-radius: 5px;
+            @include media("<=sd"){
+              width: 180px;
+              top: 65px;
+            }
+            img{
+              top: -23px;
+              width: calc(100% + 17px);
+              border-radius: 5px;
+            }
+          }
+          .ctn-name{
+            display: flex;
+            .pr{
+              white-space: nowrap;
+              font-family: $prata;
+              font-size: 27px;
+              line-height: 37px;
+              @include media("<=mob"){
+                font-size: 18px;
+                line-height: 25px;
+              }
+            }
+          }
+          .ctn-av{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-left: 15px;
+            @include media("<=tab"){
+              align-items: flex-start;
+              margin-left: 0px;
+              margin-top: 15px;
+            }
+            img{ margin-right: 10px; }
+            .a-text{
+              font-family: $pop;
+              font-size: 14px;
+              line-height: 21px;
+              .pr{
+                font-family: $pop;
+                font-size: 14px;
+                line-height: 21px;
+              }
+              @include media("<=sd"){
+                white-space: normal;
+              }
+              @include media("<=tab"){
+                font-size: 12px;
+              }
+            }
+          }
+          .ctn-act{
+            a{
+              text-decoration: none;
+              @include media("<=sd"){
+                display: block;
+                width: 100%;
+              }
+            }
+            .btn{
+              @extend %j-c;
+              @include media("<=sd"){
+                width: 100%;
+                text-align: left;
+                padding: 15px 15px;
+              }
+              font-size: 14px;
+              padding: 5px 15px;
+              img{
+                margin-right: 10px;
+                // @include media("<=sd"){
+                // }
+                // margin-right: 5px;
+              }
+              span{
+                white-space: nowrap;
+                @include media("<=sd"){
+                  white-space: normal;
+                }
+              }
+            }
+            .btn-sc-parent{
+              @extend %j-s-b;
+              @include media("<=576px"){ margin-top: 15px; }
+              a{
+                @include media("<=sd"){ width: 45%; }
+                @include media("<=tab"){ width: 48%; }
+                display: block;
+                width: 50%;
+              }
+            }
+          }
+          .ctn-img-sm{
+            .d-single{
+              width: 18vw;
+              top: 25px;
+              left: 0;
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
