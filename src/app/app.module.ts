@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { DoctorProfileComponent } from './pages/doctor-profile/doctor-profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { translocoLoader } from './transloco.loader';
@@ -20,19 +19,20 @@ import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { ClinicsComponent } from './pages/clinics/clinics.component';
 import { ClinicSingleComponent } from './pages/clinic-single/clinic-single.component';
+import { DoctorSingleComponent } from './pages/doctor-single/doctor-single.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DoctorProfileComponent,
     ToggleButtonComponent,
     LoginComponent,
     AboutComponent,
     PrivacyComponent,
     TermsComponent,
     ClinicsComponent,
-    ClinicSingleComponent
+    ClinicSingleComponent,
+    DoctorSingleComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, TranslocoModule],
   providers: [

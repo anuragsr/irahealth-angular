@@ -4,9 +4,9 @@
       <div class="ctn-breadcrumb">
         <div>
           <a [routerLink]="['/home']">Home</a> >
-          <a href="./">City</a> >
-          <a href="./">Area</a> >
-          <a href="./">Medanta Medicity</a>
+          <a [routerLink]="['./']">City</a> >
+          <a [routerLink]="['./']">Area</a> >
+          <a [routerLink]="['./']">Medanta Medicity</a>
           <div class="label mt-1">Welcome to our clinic profile page.</div>
         </div>
       </div>
@@ -129,19 +129,25 @@
           <div class="row doc-item">
             <div class="col-3 d-none d-md-block">
               <div class="d-single">
-                <img src="assets/jpg/Doctor1.jpg" alt="" />
+                <a [routerLink]="['/doctor-single']">
+                  <img src="assets/jpg/Doctor1.jpg" alt="" />
+                </a>
               </div>
             </div>
             <div class="col-12 col-md-9">
               <div class="row mb-4">
                 <div class="col-4 d-sm-block d-md-none ctn-img-sm">
                   <div class="d-single">
-                    <img src="assets/jpg/Doctor1.jpg" alt="" />
+                    <a [routerLink]="['/doctor-single']">
+                      <img src="assets/jpg/Doctor1.jpg" alt="" />
+                    </a>
                   </div>
                 </div>
                 <div class="col-8 col-md-12">
                   <div class="ctn-name">
-                    <span class="pr">Dr. P.K. Jain</span>
+                    <a [routerLink]="['/doctor-single']">
+                      <span class="pr">Dr. P.K. Jain</span>
+                    </a>
                     <div class="ctn-av d-none d-md-flex">
                       <img src="assets/svg/tick.svg" alt="">
                       <div class="pr a-text">
@@ -194,7 +200,7 @@
               </div>
               <div class="row ctn-act">
                 <div class="col-12 col-sm-5">
-                  <a href="tel:9310208329">
+                  <a [routerLink]="['/doctor-single']">
                     <button class="btn btn-pr">
                       <img src="assets/svg/appointment.svg" alt="">
                       <span>Request an Appointment</span>
@@ -202,102 +208,7 @@
                   </a>
                 </div>
                 <div class="col-12 col-sm-7 btn-sc-parent">
-                  <a href="doctor-profile.html">
-                    <button class="btn btn-sc">
-                      <img src="assets/svg/userIcon.svg" alt="">
-                      <span>View Profile</span>
-                    </button>
-                  </a>
-                  <a href="#">
-                    <button class="btn btn-sc">
-                      <img src="assets/svg/bookmark.svg" alt="">
-                      <span>Bookmark</span>
-                    </button>
-                  </a>
-                </div>
-
-              </div>
-              <hr/>
-            </div>
-          </div>
-
-          <div class="row doc-item">
-            <div class="col-3 d-none d-md-block">
-              <div class="d-single">
-                <img src="assets/jpg/Doctor2.jpg" alt="" />
-              </div>
-            </div>
-            <div class="col-12 col-md-9">
-              <div class="row mb-4">
-                <div class="col-4 d-sm-block d-md-none ctn-img-sm">
-                  <div class="d-single">
-                    <img src="assets/jpg/Doctor2.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="col-8 col-md-12">
-                  <div class="ctn-name">
-                    <span class="pr">Dr. D.T. Mishra</span>
-                    <div class="ctn-av d-none d-md-flex">
-                      <img src="assets/svg/tick.svg" alt="">
-                      <div class="pr a-text">
-                        Available Today<br class="d-sm-block d-md-none"/> at ₹400 consultation fee at clinic
-                      </div>
-                    </div>
-                  </div>
-                  <div class="value">Gastroenterologist, 30yrs exp.</div>
-                  <div class="ctn-av d-sm-flex d-md-none">
-                    <img src="assets/svg/tick.svg" alt="">
-                    <div class="pr a-text">
-                      Available Today<br class="d-sm-block d-md-none"/> at ₹400 consultation fee at clinic
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-6">
-                  <div class="row">
-                    <div class="col-12 p-0">
-                      <div class="label">Location</div>
-                      <div class="value">Gurugram, Delhi NCR</div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 p-0">
-                      <div class="label">Department</div>
-                      <div class="value">Gastroenterology and Hepatology</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="row">
-                    <div class="col-12 p-0">
-                      <div class="label">Phone Number</div>
-                      <div class="value">
-                        <a href="tel:+919192939493">+91 91929 39493</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 p-0">
-                      <div class="label">Email</div>
-                      <div class="value">
-                        <a href="mailto:dr.pkjain@irahealth.com">dr.pkjain@irahealth.com</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row ctn-act">
-                <div class="col-12 col-sm-5">
-                  <a href="tel:9310208329">
-                    <button class="btn btn-pr">
-                      <img src="assets/svg/appointment.svg" alt="">
-                      <span>Request an Appointment</span>
-                    </button>
-                  </a>
-                </div>
-                <div class="col-12 col-sm-7 btn-sc-parent">
-                  <a href="doctor-profile.html">
+                  <a [routerLink]="['/doctor-single']">
                     <button class="btn btn-sc">
                       <img src="assets/svg/userIcon.svg" alt="">
                       <span>View Profile</span>
@@ -318,19 +229,25 @@
           <div class="row doc-item">
             <div class="col-3 d-none d-md-block">
               <div class="d-single">
-                <img src="assets/jpg/Doctor3.jpg" alt="" />
+                <a [routerLink]="['/doctor-single']">
+                  <img src="assets/jpg/Doctor2.jpg" alt="" />
+                </a>
               </div>
             </div>
             <div class="col-12 col-md-9">
               <div class="row mb-4">
                 <div class="col-4 d-sm-block d-md-none ctn-img-sm">
                   <div class="d-single">
-                    <img src="assets/jpg/Doctor3.jpg" alt="" />
+                    <a [routerLink]="['/doctor-single']">
+                      <img src="assets/jpg/Doctor2.jpg" alt="" />
+                    </a>
                   </div>
                 </div>
                 <div class="col-8 col-md-12">
                   <div class="ctn-name">
-                    <span class="pr">Dr. Parirath Tiwari</span>
+                    <a [routerLink]="['/doctor-single']">
+                      <span class="pr">Dr. D.T. Mishra</span>
+                    </a>
                     <div class="ctn-av d-none d-md-flex">
                       <img src="assets/svg/tick.svg" alt="">
                       <div class="pr a-text">
@@ -383,7 +300,7 @@
               </div>
               <div class="row ctn-act">
                 <div class="col-12 col-sm-5">
-                  <a href="tel:9310208329">
+                  <a [routerLink]="['/doctor-single']">
                     <button class="btn btn-pr">
                       <img src="assets/svg/appointment.svg" alt="">
                       <span>Request an Appointment</span>
@@ -391,7 +308,107 @@
                   </a>
                 </div>
                 <div class="col-12 col-sm-7 btn-sc-parent">
-                  <a href="doctor-profile.html">
+                  <a [routerLink]="['/doctor-single']">
+                    <button class="btn btn-sc">
+                      <img src="assets/svg/userIcon.svg" alt="">
+                      <span>View Profile</span>
+                    </button>
+                  </a>
+                  <a href="#">
+                    <button class="btn btn-sc">
+                      <img src="assets/svg/bookmark.svg" alt="">
+                      <span>Bookmark</span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+              <hr/>
+            </div>
+          </div>
+
+          <div class="row doc-item">
+            <div class="col-3 d-none d-md-block">
+              <div class="d-single">
+                <a [routerLink]="['/doctor-single']">
+                  <img src="assets/jpg/Doctor3.jpg" alt="" />
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-9">
+              <div class="row mb-4">
+                <div class="col-4 d-sm-block d-md-none ctn-img-sm">
+                  <div class="d-single">
+                    <a [routerLink]="['/doctor-single']">
+                      <img src="assets/jpg/Doctor3.jpg" alt="" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-8 col-md-12">
+                  <div class="ctn-name">
+                    <a [routerLink]="['/doctor-single']">
+                      <span class="pr">Dr. Parirath Tiwari</span>
+                    </a>
+                    <div class="ctn-av d-none d-md-flex">
+                      <img src="assets/svg/tick.svg" alt="">
+                      <div class="pr a-text">
+                        Available Today<br class="d-sm-block d-md-none"/> at ₹400 consultation fee at clinic
+                      </div>
+                    </div>
+                  </div>
+                  <div class="value">Gastroenterologist, 30yrs exp.</div>
+                  <div class="ctn-av d-sm-flex d-md-none">
+                    <img src="assets/svg/tick.svg" alt="">
+                    <div class="pr a-text">
+                      Available Today<br class="d-sm-block d-md-none"/> at ₹400 consultation fee at clinic
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Location</div>
+                      <div class="value">Gurugram, Delhi NCR</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Department</div>
+                      <div class="value">Gastroenterology and Hepatology</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Phone Number</div>
+                      <div class="value">
+                        <a href="tel:+919192939493">+91 91929 39493</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 p-0">
+                      <div class="label">Email</div>
+                      <div class="value">
+                        <a href="mailto:dr.pkjain@irahealth.com">dr.pkjain@irahealth.com</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row ctn-act">
+                <div class="col-12 col-sm-5">
+                  <a [routerLink]="['/doctor-single']">
+                    <button class="btn btn-pr">
+                      <img src="assets/svg/appointment.svg" alt="">
+                      <span>Request an Appointment</span>
+                    </button>
+                  </a>
+                </div>
+                <div class="col-12 col-sm-7 btn-sc-parent">
+                  <a [routerLink]="['/doctor-single']">
                     <button class="btn btn-sc">
                       <img src="assets/svg/userIcon.svg" alt="">
                       <span>View Profile</span>
@@ -412,7 +429,7 @@
         </div>
       </div>
       <div class="foot-link">
-        <a class="pr" href="#">
+        <a class="pr" [routerLink]="['/doctors']">
           See our panel of doctors
           <img src="assets/svg/SeeMoreArrow.svg" alt="">
         </a>
