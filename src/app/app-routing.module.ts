@@ -6,6 +6,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { ClinicsComponent } from './pages/clinics/clinics.component';
+import { ClinicsComponent } from './pages/clinics/clinics.component';
+import { ClinicSingleComponent } from './pages/clinic-single/clinic-single.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,7 +16,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'privacy', component: PrivacyComponent },
   { path: 'terms', component: TermsComponent },
-  { path: 'clinics', component: ClinicsComponent }
+  { path: 'clinics', component: ClinicsComponent },
+  { path: 'clinic-single', component: ClinicSingleComponent }
 ];
 
 @NgModule({

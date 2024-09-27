@@ -19,6 +19,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { ClinicsComponent } from './pages/clinics/clinics.component';
+import { ClinicSingleComponent } from './pages/clinic-single/clinic-single.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ClinicsComponent } from './pages/clinics/clinics.component';
     AboutComponent,
     PrivacyComponent,
     TermsComponent,
-    ClinicsComponent
+    ClinicsComponent,
+    ClinicSingleComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, TranslocoModule],
   providers: [
