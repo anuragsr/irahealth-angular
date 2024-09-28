@@ -1,6 +1,6 @@
 # Irahealth
 
-A multilingual, 2 page healthcare startup website built in Angular 11
+A multilingual healthcare startup website built in Angular 11
 
 [Demo](http://envisagecyberart.in/projects/the-workspace/)
 
