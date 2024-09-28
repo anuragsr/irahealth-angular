@@ -22,6 +22,7 @@ import { ClinicSingleComponent } from './pages/clinic-single/clinic-single.compo
 import { DoctorSingleComponent } from './pages/doctor-single/doctor-single.component';
 import { DoctorsComponent } from './pages/doctors/doctors.component';
 import { ChatComponent } from './pages/chat/chat.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ChatComponent } from './pages/chat/chat.component';
     ClinicSingleComponent,
     DoctorSingleComponent,
     DoctorsComponent,
-    ChatComponent
+    ChatComponent,
+    ContactComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, TranslocoModule],
   providers: [

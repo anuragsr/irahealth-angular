@@ -4,11 +4,11 @@ import { LangService } from '../../utils/lang/lang-service.service';
 import { l } from '../../utils/helpers';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class ContactComponent implements OnInit {
   lang = 'en';
 
   ngOnInit(): void {}
